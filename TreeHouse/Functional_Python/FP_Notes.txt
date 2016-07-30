@@ -1,0 +1,47 @@
+Ground Rules
+    Computation is the evaluation of functions
+        -We do our work, computing values and outcomes, all in functions. We'll try to keep as much of our work inside
+        of discrete functions as possible.
+    Programming is done with expressions
+        -We do our work by using expressions, passing the output of one function into another, either through
+        chaining or by assigning the output to a variable and then using that variable.
+    No side-effects from computation
+        -We don't want to change values outside of our functions scope. We have to be careful with this when we're
+        using mutable types such as lists and dicts.
+    Functions are first class citizens
+        -In python, functions can be provided as an argument to a function call or returned from a function. Since
+        functions are usable as values just like variables are, they're considered to be 'first-class'
+    Functions should be limited in scope and functionality
+        -We want to make sure our functions have a well-defined purpose. We want them to achieve a single task and
+        then give us the answer from that task.
+
+map - takes a function and in iterable. The function should take a single arg. This function will be applied in
+    order to each item in the iterable and the result of that function will be returned to map(). In the end,
+    map() will return a new iterable with the mutated values.
+
+    [func(item) for the item in iterable] achieves the same result, plus turns the results into a list. For simple,
+    single-serving applications, this is often a better choice since it's often more readable at a glance.
+
+filter() - takes a function and an iterable. The function, like with map(), takes only a single argument and is
+    applied to each item in the iterable. If the function returns a truthy value for the time, the item is sent
+    back to filter() which, ultimately, returns a new iterable of the filtered items.
+
+    You can achieve the same effect with [item for item in iterable if func(item)]. Again, like with map(), this can
+    be more quickly readable for small applications.
+
+filterfalse() - is a function that works just like filter() but only returns things where the filter function
+    gives back a False or non-truthy
+
+functools.reduce() - takes a function and an iterable. The function takes 2 args. the first time it runs the 2
+    arguments will be the first 2 times in the iterable. Every time after that the 1st arg will be the result
+    of the last time the function was run. The second arg will be the next value from the iterable. When the
+    iterable is out out of items, reduce() will return whatever the function returned last
+
+    Think about adding up all of the numbers in a column. You add the top 2 then then ad the 3rd number to the
+    sum you got from the first 2. then  you add the forth number to the sum of the top 3 and so on.
+
+    Calling a function over again from within itself is known aS recursion and it's what makes reduce() about
+    to do its job.
+
+lambda - like def is the keyword that marks a new function. Lambda functions don't have a name. Lambdas can't
+    contain new lines (outside of containers) or assignments

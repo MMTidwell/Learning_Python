@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel= "stylesheet" type="text/css" href= "cheat.sheet.css">
+	<title>Cheat Sheet</title>
+</head>
+<div>
+<h1>Python</h1>
+	<h2>Multiply Variables:</h2>
+		<div class="concept">
+		
+		<div class="wrapper">
+			<div class="box1">
+				cup_in_a_gallon=16<br>
+				gallons_in_trash_can=20<br>
+				cups_in_20_gallon=cup_in_a_gallon*gallons_in_trash_can<br><br>
+				print cups_in_20_gallon<br><br>
+				result= 320<br><br>
+			</div>
+		</div>
+	<h2>Strings:</h2>
+		<div class="concept">
+			Strings are sequences of characters that are enclosed in quotes. We can enclose them with single or double quotes and assign them to variables. When using single or double quotes you can use both but be consistent when using them. We can even combine strings by adding them (we call this concatenation). 
+
+		<h3>Concatenation</h3>
+			Placing 2 or more strings together using the + symbol. It will not have a space between the 2 strings. Adding numbers into strings is not possible and you will get an error, however when you do '!' * 3 = !!! Here are several examples that show the difference.
+			
+			<div class="wrapper">
+				<div class="box1">
+					<em><b>Example with substrings:</em></b><br>
+					<b>Example 1:</b> 'string' + 'string' = stringstring<br>
+					<b>Example 2:</b> 'string ' + 'string' = string string<br>
+					<b>Example 3:</b> 'string ' + 'string' + '!' * 3 = string string!!!<br><br>
+					<em>**Please notice the space between the first g and the ' 
+					on examples 2 and 3, where on example 1 there is no space.**</em><br><br>
+				</div>
+				<div class="box1">
+					<em><b>Example with substrings and replacing words:</em></b><br>
+					sentence= 'A NOUN went on a walk. It can VERB really fast.'<br>
+					substring1= sentence [:2] (before NOUN)<br>
+					substring2= sentence [6:-17] (after NOUN, before VERB)<br>
+					substring3= sentence [-13:] (after VERB)<br>
+					noun_replacment = cat<br>
+					verb_replacment = run<br>
+					new_sentence= substring1 + noun_replacement + substring2 + verb_replacment + substring3<br>
+					print new_sentence<br>
+					<em>Result: A cat went on a walk. It can run really fast.</em><br><br>
+				</div>
+			</div>
+
+		<h3>Selecting Sub-sequences</h3>
+			Selecting a sub-sequence of a string starting from the first expression, then stopping at the last expression. This would look like:<string> [<expression>:<expression>]. Please note that you do not have to have a number at the end of the :, but if you do not it will pull the rest of the string. You can also do [:] and this will pull the whole string.
+		
+			<div class="wrapper">
+				<div class="box1">
+					<em><b>Indexing Strings</em></b><br>
+					name = "Tim"<br>
+					print name [2]<br>
+					<em>Result= m</em>
+				</div>
+				<div class="box1">
+					<em><b>Selecting Sub-sequences</em></b><br>
+					name = "Mittsy"<br>
+					print name [2:4]<br>
+					<em>Result= tt</em>
+				</div>
+			</div>
+
+		<h3>Finding Strings with a Parameter</h3>
+			Parameters are what goes inside the parentheses. The final output is the number of the position in the search string, where the target string appears. The first occurrence after the number &lt; string &gt; .find("string" + "number").
+			<div class="wrapper">
+				<div class="box1">
+					<em><b>Examples of .find</b></em><br>
+					"test".find("te")<br>
+					"text".find("T")<br>
+					"text".find("")<br>
+					"test"[2:]
+				</div>
+				<div class="box1">
+					<em><b>Results</b><br>
+					0<br>
+					-1<br>
+					0<br>
+					st</em>
+				</div>
+				<div class="box1">
+					<em><b>.find with Parameter</b></em><br>
+					"test".find("t")<br>
+					"test".find("t", 1)<br>
+					"test".find("s")<br>
+					"test".find("s", 3)
+				</div>
+				<div class="box1">
+					<em><b>Results</b><br>
+					0<br>
+					3<br>
+					2<br>
+					-1</em>
+				</div>
+			</div>
+
+		<h3>.replace Method</h3>
+			This method is very similar to the <em>.find</em> method with fewer steps, and used to find a word or phrase then replace it with another. &lt;string&gt;.replace('old', 'new')
+			<div class="wrapper">
+				<div class="box1">
+					<em><b>Example</b></em><br>
+					text= "this is a string example....wow!"<br>
+					print text.replace('is', 'was')<br>
+					<em>result: "this was a string example....wow!"</em>
+				</div>
+				<div class="box1">
+					<em><b>Example</b></em><br>
+					text= "this is a string example....wow!"<br>
+					print text.replace('is', 'was', 3)<br>
+					<em>result: "thwas was a string example....wow!"</em>
+				</div>
+				<div class="box1">
+					<em><b>Example Changing several words</b></em><br>
+					sentence= "A NOUN..., a VERB..."<br>
+					sentence= sentence.replace("NOUN", "duck")<br>
+					sentence= sentence.replace("VERB", "waddle")
+				</div>
+			</div>
+	<h2>Functions:</h2>		
+		<div class="concept">
+			AKA procedures or methods take input and return an output. Functions are bits of code that you can call repetitively, and use over and over. Functions can be defined once and used as many times as needed. There can be any number of inputs, but it has to have the number of inputs the function expects. When we do not have enough inputs in the parameters then it will give an error message. When using a function it will look like:
+
+		<h3>Functions</h3>
+
+			<div class="wrapper">
+				<div class="box1">
+					def name_of_function():<br>
+					&emsp;return ()<br>
+					print name_of_function<br>
+					<em>result: name_of_function</em>
+				</div>
+			</div>
+
+		<h3>Inputs and Outputs</h3>
+			With functions we will use inputs and outputs. Inputs are what you put into a fiction to tell them what to do and how it is done. Output is the return and the result of the function.
+
+			<div class="wrapper">
+				<div class="box1">
+					def say_hello(name):<br> 
+					&emsp; greeting= "Hello"+name+"!"<br>
+					&emsp; return greeting <br>
+					print say_hello("Tim") <br>
+					print say_hello("Mittsy") <br>
+					<em>result: <br>
+					&emsp;Hello Tim! <br>
+					&emsp;Hello Mittsy!</em>
+				</div>
+				<div class="box1">
+					<em>def=>making &emsp;&emsp;name=>input/making</em><br>
+					<em>return=>output</em><br>
+					<em>"Tim"=>using &emsp;&emsp;print=>output</em><br>
+					<em>say_hello=>using &emsp;&emsp; name=>input</em><br>
+					<em>result=> output</em><br>
+					<em>Hello Tim=>using</em><br>
+				</div>
+			</div>	
+
+		<h3>Scopes</h3>
+			With functions it is important to know the difference between local and global scope. A Local Scope refers to a variable that you can make inside the function and will be used, but does not exsit outside of the function. A Global Scope is when a variable will be available at all times. It is best to avoid using global variables because it is easier to make mistakes with them.
+		
+			<div class="wrapper">
+				<div class="box1">
+					a=6<br>
+					def some_function():<br>
+					&emsp; a=5<br>
+					print 'Local: '+str(a)<br>
+					some_function()<br>
+					print 'Global: 'str(a)<br>
+					<em>result:<br>
+					&emsp; Local: 5<br>
+					&emsp; Global: 6</em>
+				</div>
+			</div>
+	<h2>If and Else:</h2>		
+		<div class="concept">
+			Are used when controlling when a function is used and how it is used. They are controlled by the Boolean results. If Boolean results in True then the function will continue like normal. If Boolean results in False then it will stop and move to the else statements. Here are a few example of each to see how they are used. <em>If statements are normally used with numbers while, while statements are used with strings and counting until a false is returned. While statements will start counting where they are assigned.  </em>
+
+		<h3>Basic If/Else Statements</h3>
+
+			<div class="wrapper">
+				<div class="box1">
+					<b><em>Boolean Examples:</b></em><br>
+					print 2 &lt; 3<br>
+					print 21 &lt; 3<br>
+					print 7 * 3 &lt; 21<br>
+					print 7 * 3 != 21<br>
+					print 7 * 3 == 21<br>
+				</div>
+				<div class="box1">
+					<b><em>Results:</b><br>
+					True<br>
+					False<br>
+					False<br>
+					False<br>
+					True</em>
+				</div>
+			</div>
+
+		<h3>Biggest with 3+ numbers</h3>
+			<div class="wrapper">
+				<div class="box1">
+				<em><b>Biggest with 3+ numbers</em></b><br>
+					def bigger (a,b,c):<br>
+					&emsp; if a > b:<br>
+					&emsp; &emsp; if a > c:<br>
+					&emsp; &emsp; &emsp; return a<br>
+					&emsp; &emsp; else:<br>
+					&emsp; &emsp; &emsp; return c<br>
+					&emsp; else:<br>
+					&emsp; &emsp; if b > c:<br>
+					&emsp; &emsp; &emsp; return b<br>
+					&emsp; &emsp; else:<br>
+					&emsp; &emsp; &emsp; return c<br>
+				</div>
+				<div class="box1">
+					<b><em> Biggest with max</b></em><br>
+					def biggest (a,b,c):<br>
+					&emsp; return max<br>
+					print max (a,b,c)
+				</div>	
+			</div>
+
+		<h3>Or Statements</h3>
+			Are used when comparing two or more similar items
+			
+			<div class="wrapper">
+				<div class="box1">
+					def is_friend(name):<br>
+					&emsp; return name [0] =='D' or name [0] == 'N'<br>
+					print is_friend('Doug')<br>
+					print is_friend('Nichole')<br>
+					print is_friend('Fred')<br>
+					&emsp;<em>Result: True, True, False</em>
+				</div>
+				<div class="box1">
+					def string ():<br>
+					&emsp; return<br>
+					print True or False<br>
+					print False or True<br>
+					print True or True<br>
+					print False or False<br>
+					&emsp; <em>Result: True, True, True, False</em>
+				</div>
+			</div>
+	<h2>While Statements</h2>
+		<div class='concpet'>
+			Are used when you are wanting to create a loop for a function, this loop will be used until it returns a false statement. After the false statement it will then move to the next line of code. Loops are a very important concept of computer programming, that allow us to run blocks of code as many times as we wish without having repetition. <em>If statements are normally used with numbers while, while statements are used with strings and counting until a false is returned. While statements will start counting where they are assigned. Bellow they are assigned to i = 0 and i = 1.</em>
+
+		<h3>Basic While Statement</h3>
+
+			<div class="wrapper">
+				<div class='box1'>
+					def count():<br>
+					&emsp;i = 0<br>
+					&emsp;while i &lt; 10:<br>
+					&emsp; &emsp; print i<br>
+					&emsp; &emsp; i = i + 1<br>
+					count ()<br>
+					&emsp;<em>Result: 0 1 2 3 4 5 6 7 8 9</em>
+				</div>
+				<div class='box1'>
+					def count():<br>
+					&emsp;i = 1<br>
+					&emsp;while i != 10:<br>
+					&emsp; &emsp; i = i + 2<br>
+					&emsp; &emsp; print i<br>
+					count ()<br>
+					&emsp;<em>Result: 1 2 3 (will continue forever)</em>
+				</div>
+			</div>
+			<div class='wrapper'>
+				<div class='box1'>
+					def print_numers(n):<br>
+					&emsp;i = 1<br>
+					&emsp;while i <= n:<br>
+					&emsp; &emsp; print i<br>
+					&emsp; &emsp; i = i + 1<br>
+					print print_numbers(3)<br>
+					&emsp;<em>Result: 1 2 3</em>
+				</div>				
+				<div class='box1'>
+					def remove_spaces(text):<br>
+					&emsp;text_without_spaces = '': <em>(empty string for now)</em><br>
+					&emsp;while text != '':<br>
+					&emsp;&emsp;next_character = text[0]<br>
+					&emsp;&emsp;if next_character != ' ': <em>(single space)</em><br>
+					&emsp;&emsp;&emsp;text_without_spaces = text_without_spaces + next_character<br>
+					&emsp;&emsp;text = text [1:]<br>
+					&emsp;return text_without_spaces<br>
+					print remove_spaces("hello my name is Mittsy, how are you?")<br>
+					&emsp;<em>hellomynameisMittsy,howareyou?</em>			
+				</div>	
+			</div>			
+	<h2>Structured Data: List</h2>
+		<div class='concept'>
+			List are similar to how strings are sequences of characters, lists are sequences of anything! We can have lists of numbers, lists of characters, even lists of lists! And we can mix up the contents too so we can have lists containing many different things. One of the advantages of having data with structure (like in a list) is that you can take advantage of that structure! One way you can do that is by directly looping through the elements of a list with what's called a for loop. 
+
+		<h3>Basic Examples</h3>
+			<div class="wrapper">
+				<div class='box1'>
+					<b><em> Basic Example:</em></b><br>
+					p = ['y', 'a', 'b', 'b', 'a', '!']<br>
+					print p<br>
+					print p[0]<br>
+					print p[2:4]<br>
+					<em>result:	<br>
+					&emsp;['y', 'a', 'b', 'b', 'a', '!']<br>
+					&emsp;['y']<br>
+					&emsp;['b', 'b',]</em>
+				</div>
+				<div class='box1'>
+					<b><em> Strings and Numbers Example:</em></b><br>
+					mixed_list = ['Hello!', 42, "Goodbye!"]<br>
+					print mixed_list<br>
+					<em>result:<br>
+					&emsp;['Hello!', 42, "Goodbye!"]</em>
+				</div>
+			</div>
+			<div class='wrapper'>
+				<div class='box1'>
+					<b><em> List within List Example:</em></b><br>
+					list_with_lists = [3, 'colors:', ['red', 'green', 'blue'], 'your favorite?']<br>
+					print list_with_lists<br>
+					<em>result:<br> 
+					&emsp;[3, 'colors:', ['red', 'green', 'blue'], 'your favorite?']<br></em>
+				</div>	
+			</div>
+
+		<h3>Days in month</h3>
+
+			<div class="wrapper">
+				<div class='box1'>
+					<b><em>Days in Month Example:</b></em><br>	
+					days_in_month = [31,28,31,30,31,30,31,31,30,31,30,31]<br>
+					def how_many_days(month):<br>
+					&emsp;return days_in_month[month-1]<br>
+					print how_many_days(12)<br>
+					<em>result: 31</em>
+				</div>	
+			</div>
+
+		<h3>Nested List</h3>
+
+			<div class="wrapper">
+				<div class='box1'>
+					<b><em>Nested List Example:</em></b><br>
+					beatles=[['John', 1940], ['Paul', 1942], ['George', 1943], ['Ringo', 1940]]<br>
+					print beatles [3]<br>
+					print beatles [3][0]<br>
+					print beatles [3][1]<br>
+					<em>result:<br>
+					&emsp;['Ringo', 1940]<br>
+					&emsp;Ringo<br>
+					&emsp;1940</em>
+				</div>				
+				<div class='box1'>
+					<b><em>Nested List with Division:</em></b><br>	
+					countries = [['China', 'Beijing', 1350],['Romania', 'Bucharest', 21]]<br>
+					print countries[0][2]/countries[1][2]<br>
+					<em>result: 64</em>
+				</div>	
+			</div>			
+		
+		<h3>Mutation</h3>
+			Modify the existing object, so we can change the value of a list after we have created it. Once a list had been modified then we then we have to worry about other variables that might refer to the same object. This can only be done in lists. 
+
+			<div class="wrapper">
+				<div class='box1'>
+					<b><em>Basic String:</em></b><br>
+					s='Hello'<br>
+					s='Yello'<br>
+					s= s + w<br>
+					print s<br>
+					<em>result: Yellow</em>
+				</div>
+				<div class='box1'>
+					<b><em>Basic List:</em></b><br>
+					p=['H','e','l','l','o']<br>
+					print p<br>
+					p[0]='Y'<br>
+					print p<br>
+					p[4]= '!'<br>
+					print p<br>
+					<em>result:<br>
+					&emsp;['H','e','l','l','o']<br>
+					&emsp;['Y','e','l','l','o']<br>
+					&emsp;['Y','e','l','l','!']</em>
+				</div>
+			</div>	
+
+		<h3>Aliasing</h3>
+			When we have 2 different ways to refer to the same object. When one of them does not work neither of them will work. Any change that we make to one of the objects, will change it in the other.
+
+			<div class="wrapper">
+				<div class='box1'>
+					<b><em>Example:</em></b><br>
+					p=['J','a','m','e','s']<br>
+					q=p <em>THIS IS MUTATION!</em><br>
+					p[2]='n'<br>
+					print p<br>
+					p= [0,0,7] <em>THIS IS ALIASING!</em><br>
+					print p <br>
+					<em>results:<br>
+					&emsp;['J','a','n','e','s']<br>
+					&emsp;[0,0,7] P CHANGES TO 007, WHILE Q STAYS WITH JANES!</em>
+				</div>
+				<div class='box1'>
+					<b><em>def Example:</em></b><br>
+					spy=[0,0,7]<br>
+					def replace_spy(p):<br>
+					&emsp;p[2] = p[2] + 1<br>
+					replace_spy(spy)<br>
+					print spy<br>
+					<em>result: [0,0,8]</em>
+				</div>	
+			</div>
+
+		<h3>List Operations:</h3>
+			<h4>.append</h4>
+				This will allow us to add a new element at the end of a list. This will mutate the old list, not not create a new list. 
+
+				<div class="wrapper">
+				<div class='box1'>
+					<b><em>Example:</em></b><br>
+					stooges=['Moe','Larry','Curly']<br>
+					stooges.append('Shemp')<br>
+					print stooges<br>
+					<em>result: 
+					&emsp; ['Moe','Larry','Curly','Shemp']</em>
+				</div>
+			</div>
+
+			<h4>Plus</h4>This is very similar to strings. Creates new list instead of editing a previous one. There is a small difference between .append and +, .append can place a list inside of a list, while + adds list together.
+
+			<div class="wrapper">
+				<div class='box1'>
+					<b><em>Example:</em></b><br>
+					[0,1] + [2,3]<br>
+					<em>result:<br>
+					&emsp;[0,1,2,3]</em>
+				</div>
+			</div>
+
+			<h4>Len</h4>Is an object we want to know the length of. Works for many things other than list. It will work for any object that is a collection of things. The output of len is the number of elements in the input.
+
+			<div class="wrapper">
+				<div class='box1'>
+					<b><em> Example:</em></b><br>	
+					len ([0,1])<br>
+					<em>result: 2</em>
+				</div>	
+				<div class='box1'>
+					<b><em>Example:</em></b><br>
+					len ('Udacity')<br>
+					</em>result: 7</em>
+				</div>				
+				<div class='box1'>
+					<b><em>Example:</em></b><br>	
+					p=[1,2]<br>
+					p.append(3)<br>
+					p=p+[4,5]<br>
+					len p<br>
+					<em>result: 5</em>
+				</div>	
+			</div>	
+
+			<h4>+=</h4>"add and" symbol add the right operand to the left operand and assign the result to left operand.
+
+			<div class='wrapper'>
+				<div class='box1'>
+					<em><b>Example:</em></b><br>
+					list = [1,2,3,4,5]<br>
+					list += [6,7]<br>
+					def proc(mylist):<br>
+					&emsp;mylist +=myList<br>
+					print list<br>
+					proc(list)<br>
+					print list<br>
+					<em>result:<br>
+					&emsp;[1,2,3,4,5,6,7]<br>
+					&emsp;[1,2,3,4,5,6,7,1,2,3,4,5,6,7]</em>
+				</div>
+			</div>
+	<h2>Structured Data: Loops</h2>
+		<div class='concpet'>
+
+		<h3>for Loops</h3>
+			For loops, like while loops, are useful for running a block of code multiple times. For loops make iterating through elements in a list easier than using a while loop.
+
+			<div class="wrapper">
+				<div class='box1'>
+					<b><em> Basic Example:</em></b><br>	
+					def print_all_elements(p):<br>
+		    		&emsp;for e in p:<br>
+		        	&emsp;&emsp;print e<br>
+					myList = [1, 2, [3, 4]]<br>
+					print_all_elements(myList)<br>
+					<em>result:<br>
+					&emsp;1<br>
+					&emsp;2<br>
+					&emsp;[3,4]</em>
+				</div>
+				<div class='box1'>
+					<b><em> Basic Example:</em></b><br>
+					example_list_1 = ['a', 'b', 'c', 'd']<br>
+					for thing in example_list_1:<br>
+					&emsp;print thing <br>
+					<em>result: <br>
+					['a','b','c',d]</em>
+				</div>
+				<div class='box1'>
+					<b><em>Example with list:</em></b><br>	
+					example_list_2 = [['China', 'Beijing'], ['USA'  , 'Washington D.C.'], ['India', 'Delhi']]<br>
+					for country_with_capital in example_list_2:<br>
+			    	&emsp;country = country_with_capital[0]<br>
+			    	&emsp;capital = country_with_capital[1]<br>
+			    	&emsp;print capital + ' is the capital of ' + country<br>
+					<em>result:<br>
+					&emsp;Beijing is the capital of China<br>
+					&emsp;Washington D.C. is the capital of USA<br>
+					&emsp;Delhi is the capital of India</em>
+				</div>
+			</div>
+			<div class='wrapper'>
+				<div class='box1'>
+					<b><em>Example with sum:</em></b><br>
+					def sum_list(p):<br>
+					&emsp;result = 0<br>
+					&emsp;for e in p:<br>
+					&emsp;&emsp;result = result + e<br>
+					&emsp;return result<br>
+					print sum_list([1,7,4])	<br>
+					print sum_list([9,4,10])<br>
+					<em>result: 12, 23</em>
+				</div>
+				<div class='box1'>
+					<b><em>Example for counting:</em></b><br>
+					def measure_udacity(p):<br>
+					&emsp;count = 0<br>
+					&emsp;for e in p:<br>
+					&emsp;&emsp;if e[0] == 'U':<br>
+					&emsp;&emsp;&emsp;count = count + 1<br>
+					&emsp;return count<br>
+					print measure_udacity(['Dave','U2'])<br>
+					<em>result: 1</em>
+				</div>
+				<div class='box1'>
+					<b><em>Example, while and for:</em></b><br>
+					def find_element(p,t):<br>
+					&emsp;i = 0<br>
+					&emsp;for e in p:<br>
+					&emsp;&emsp;if e == t:<br>
+					&emsp;&emsp;&emsp;return i<br>
+					&emsp;&emsp;i = i + 1<br>
+					&emsp;return -1<br>
+					print find_element([1,2,3]3)<br>
+					print find_element(['alpha','beta'],'gamma')<br>
+					<em>result: 2; -1</em>
+				</div>
+			</div>
+
+		<h3>Index list</h3>
+			Index list are invoked on a list where you pass in the value and the output of index is the position where that value exist in the list. If the result is not listed then instead of giving -1 as a result it will throw an error. It will always give us just the first one listed.
+
+			<div class='wrapper'>
+				<div class='box1'>
+					<b><em>Basic Example:</em></b><br>
+					p = [0,1,2]<br>
+					print p.index(2)<br>
+					p = [0,1,2,2,2]<br>
+					print p.index(2)<br>
+					p = [0,1,2]<br>
+					print p.index(3)<br>
+					<em>result:<br>
+					&emsp;2<br>
+					&emsp;2 (only sees the first 2, not the others)<br>
+					&emsp;3 is not in list</em>
+				</div>
+			</div>
+
+		<h3>in, not in</h3>
+			if &lt;value&gt; is in the &lt;list&gt; output is True, otherwise it is false.
+			
+			<div class='wrapper'>
+				<div class='box1'>
+					<b><em>Basic Example:</em></b><br>
+					p = [0,1,2]<br>
+					print 3 in p<br>
+					print 2 in p<br>
+					<em>result:<br>
+					&emsp;false<br>
+					&emsp;true</em>
+				</div>
+				<div class='box1'>
+					<b><em>Example with in:</em></b><br>
+					def find_element(p,t):<br>
+					&emsp;if t in p:<br>
+					&emsp;&emsp;return p.index (t)<br>
+					&emsp;else: <br>
+					&emsp;&emsp;return -1<br>
+					print find_element([1,2,3],3)<br>
+					print find_element(['alpha','beta'],'gamma')<br>
+					<em>result:<br>
+					&emsp;2<br>
+					&emsp;-1</em>
+				</div>
+				<div class='box1'>
+					def find_element(p,t):<br>
+					&emsp;if t not in p:<br>
+					&emsp;&emsp;return -1<br>
+					&emsp;else:<br> 
+					&emsp;&emsp;return p.index (t)<br>
+					print find_element([1,2,3],3)<br>	
+					print find_element(['alpha','beta'],'gamma')<br>
+					<em>result:<br>
+					&emsp;2<br>
+					&emsp;-1</em>
+				</div>
+			</div>	
+	<h2>How to solve problems</h2>
+		<div class='concpet'>
+			
+		<h3>Steps for solving large problems!</h3>
+		<ul><li>Step 1: Make sure that you understand the question</li>
+			<li>Step 2: What are the inputs and how will they be represented?</li>
+			<li>Step 3: What are the outputs and how will they be represented?</li>
+			<li>Step 4: Psuesudocode 
+				<div class='wrapper'>	
+					<div class='box1'>
+						<em><u>This determines if it is a leap year or not</u></em><br>
+						def isLeapYear(year):<br>
+						&emsp;if year % 400 == 0:<br>
+						&emsp;&emsp;return True<br>
+						&emsp;if year % 100 == 0:<br>
+						&emsp;&emsp;return False<br>
+						&emsp;if year % 4 == 0:<br>
+						&emsp;&emsp;return True<br>
+						&emsp;return False	<br><br>
+
+						<em><u>This determines how many days are in each month</u></em><br>
+						def daysInMonth(year, month):<br>
+						&emsp;if month in (1, 3, 5, 7, 8, 10, 12):<br>
+						&emsp;&emsp;return 31<br>
+						&emsp;else:<br>
+						&emsp;&emsp;if month == 2:<br>
+						&emsp;&emsp;&emsp;if isLeapYear(year):<br>
+						&emsp;&emsp;&emsp;&emsp;return 29<br>
+						&emsp;&emsp;&emsp;return 28<br>
+						&emsp;&emsp;else:<br>
+						&emsp;&emsp;&emsp;return 30<br><br>
+
+						<em><u>This determines the following day</u></em><br>
+						def nextDay(year, month, day):<br>
+		    			&emsp;if day &lt; daysInMonth(year, month):<br>
+		        		&emsp;&emsp;return year, month, day + 1<br>
+		    			&emsp;else:<br>
+		        		&emsp;&emsp;if month == 12:<br>
+		            	&emsp;&emsp;&emsp;return year + 1, 1, 1<br>
+		        		&emsp;&emsp;else:<br>
+		            	&emsp;&emsp;&emsp;return year, month + 1, 1 <br><br>
+
+		            	<em><u>This makes sure that the first date is not before the second date</u></em><br>
+						def dateIsBefore(year1, month1, day1, year2, month2, day2):<br>
+						&emsp;if year1 &lt; year2:<br>
+						&emsp;&emsp;return True<br>
+						&emsp;if year1 == year2:<br>
+						&emsp;&emsp;if month1 &lt; month2:<br>
+						&emsp;&emsp;&emsp;return True<br>
+						&emsp;&emsp;if month1 == month2:<br>
+						&emsp;&emsp;&emsp;return day1 &lt; day2<br>
+						&emsp;return False<br><br>       		            	
+		
+						<em><u>This counts the number of days between each given date, starting with 0</u></em><br>
+						def daysBetweenDates(year1, month1, day1, year2, month2, day2):<br>
+						&emsp;assert not dateIsBefore(year2, month2, day2, year1, month1, day1)<br>
+						&emsp;days = 0<br>
+						&emsp;while dateIsBefore(year1, month1, day1, year2, month2, day2):<br>
+						&emsp;&emsp;year1, month1, day1 = nextDay(year1, month1, day1)<br>
+						&emsp;&emsp;days += 1<br>
+						&emsp;return days <br><br>
+
+						<em><u>This is the testing area</u></em><br>
+						def test():<br>
+					    test_cases = [((2012,1,1,2012,2,28), 58), <br>
+					    &emsp;&emsp;&emsp;((2012,1,1,2012,3,1), 60),<br>
+					    &emsp;&emsp;&emsp;((2011,6,30,2012,6,30), 366),<br>
+					    &emsp;&emsp;&emsp;((2011,1,1,2012,8,8), 585 ),<br>
+					    &emsp;&emsp;&emsp;((1900,1,1,1999,12,31), 36523)]<br><br>
+					    
+					    for (args, answer) in test_cases:<br>
+					    &emsp;result = daysBetweenDates(*args)<br>
+					    &emsp;if result != answer:<br>
+					    &emsp;&emsp;print "Test with data:", args, "failed"<br>
+					    &emsp;else:<br>
+					    &emsp;&emsp;print "Test case passed!"<br><br>
+
+						test()</li></ul>
+					</div>
+				</div>
+	<h2> Next section </h2>
+		<div class='concept'>
+
+			Notes start here

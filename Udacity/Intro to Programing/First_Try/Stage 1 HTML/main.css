@@ -1,0 +1,39 @@
+div {
+	background-color: aliceblue;
+	/**main background color**/
+}
+
+h1 {
+	 text-align: center;
+	 background-color: darkblue;
+	 border-radius: 30px;
+	 font-family: arial;
+	 color: beige;
+}
+
+h2 {
+	 text-align: center;
+	 background-color: lightblue;
+	 border-radius: 30px;
+}
+
+.concept {
+	background-color: aliceblue;
+	border-radius:10px;
+}
+
+.wrapper {
+	display: flex;
+		align-items: center;
+		justify-content: center;
+}
+
+.box1 {
+	padding: 3%;
+}
+
+.box2 {
+	padding: 3%;
+	text-align: center;
+}
+

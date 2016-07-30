@@ -1,0 +1,202 @@
+PULL INFO FROM SPECIFIC COLUMN
+    SELECT table name.column name, table name. column name FROM table name;
+
+PULL ALL INFO FROM TABLE
+    SELECT * FROM table name;
+
+BOOLEAN
+    SELECT * FROM title name WHERE year = 1999;
+    SELECT * FROM title name WHERE year != 1999;
+    SELECT * FROM title name WHERE year > 1999;
+    SELECT * FROM title name WHERE year >= 1999;
+    SELECT * FROM title name WHERE year < 1999;
+    SELECT * FROM title name WHERE year <= 1999;
+
+AND/OR BETWEEN LIKE
+    SELECT * FROM title name WHERE year = 1999 AND title = 'The Matrix';
+    SELECT * FROM title name WHERE year = 1998 OR year = 2000;
+    SELECT * FROM title name WHERE year BETWEEN 1998 AND 2000;
+    SELECT * FROM title name WHERE title LIKE '%godfather';                 % => anything can be in front of ____
+    SELECT * FROM title name WHERE title LIKE '%godfather%';                $___$ => anything between ____
+
+ORDER BY
+    select * from title name order by year;
+    select * from title name order by year desc;                desc => descending order (high to low)
+    select * from title name order by year asc;                 asc => ascending order (low to high)
+    select * from title name order by year asc, title desc;
+
+LIMIT/OFFSET
+LIMIT => how many are to be pulled from db
+OFFSET => where you will be starting on the table
+    select * from title name limit 10;
+    select * from title name limit 10 offset 1;
+    select * from title name limit 10 offset 0;
+    select * from title name limit 20, 10;          first number is limit, second is offset
+
+SEARCHING FOR NULL
+    select * from movies where year is null;
+    select * from movies order by year;
+    select * from movies where year is not null order by year;
+
+ATTACHING DB TO QUERY
+    use table name;
+
+RENAME TABLE
+    rename table name to new table name
+
+DELETE TABLE
+    drop table table name;
+    drop table if exists name;          drops table if it exists
+
+TRUNCATE
+    truncate table table name;          copy and deletes whole table
+    truncate table name;
+
+ALTERING COLUMNS
+    alter table movie_table add column genre varchar(100);
+    alter table actor_table add (pob varchar(100), dob date);
+    alter table actor_table change column pob place_of_birth varchar(100);
+    alter table actor_table change column dob date_of_birth date;
+    alter table actor_table change year year_released year;
+
+REMOVE COLUMNS
+    alter table table name drop column name
+
+CREATE SCHEMA AND DATABASE
+    create schema if not exists movie_db_1;
+    create database if not exists movie_db_2;
+
+REMOVING DATABASES (THIS IS PERMANENT!)
+    DROP SCHEMA movie_db_3;
+    DROP DATABASE movie_db_3;
+    DROP SCHEMA IF EXISTS movei_db_2;
+
+INSERT COLUMN
+    INSERT INTO genres (name) VALUES('Sci Fi');
+
+
+
+
+
+
+
+
+
+
+
+
+IN MYSQL HAS A DICT FOR ALL OF THE SYNTAX ON WE WEBSITE
+
+Database - stores data, and lets you create, read, update, and delete the data in some manner. Acts like the memory,
+    data is being read and stored with all applications.
+
+            THINK OF THESE THINGS AS A FAMILY TREE THAT OPENS UP AND GIVE MORE INFO
+Schema - the organization of data and the relationships within the database, and how the info is stored
+    AKA - Modeling - a plan or blueprint of building something and each item in the database
+Data - is the info store in the database, stored by a collection of things that are similar
+Data type - a format that is strictly enforced in that particular column
+    Formats -
+        strings - formats containing characters
+            Varchar - short strings of characters
+            Text - longer strings
+        numeric - formats containing numbers
+            Integers - numbers
+            Fixed Point - decimal
+            Float Point - non fixed decimal places
+        datetime - Store temp data or data relating to time. Contain date, time, and datetime
+
+Databases -
+    Relational Databases - SQLite, Postgres, MySQL
+Tables - collections of info with columns and rows like spreadsheets
+    Rows/Tuples - contain a structure of data
+                - each table has a name and hold specific info
+                - most of the time are singular
+    Columns - a property/attribute that you want to store
+            - defined in the schema to store the data in the column in a particular way
+
+CRUD -
+    C - create
+    R - retrieve/read   => SELECT
+    U - update
+    D - delete
+
+
+SELECT - retrieves all the entries from a given table
+    SELECT*FROM movies;
+WHERE - limits the result set b/c you are constraining it to rows that meet the specified criteria
+    SELECT * FROM movies WHERE year = 1999:
+ORDER BY - sorts a given result set to provide context to the info stored in the table. You can sort data on one or
+    more columns
+    SELECT*FROM movies ORDER BY year;
+NULL - is a value used to indicate data is not present in the db (the cell is empty)
+
+DDL - deals with special key words that create/modify tables and db (deals with schema)
+    D - data
+    D - deff
+    L - language
+
+DML - deals with CRUD in db
+    D - data
+    M - manipulation
+    L - language
+
+
+Creating DB - containers that keep info from other info
+
+Normalization - the process of setting up a table that contains repeated and redundant data from one column of a
+    table and putting that info into another table
+
+Keys -
+    Primary Keys - used to define each row in a table, can not be null or duplicated
+    Unique Keys - email/social, enforces uniqueness, can be null unless otherwise specified, can not be duplicated
+    Foreign Keys - special key that describes the relationship between data in 2 tables. AKA reference key
+        can be null and can be duplicated
+
+
+
+BASIC STATEMENTS:
+    SELECT*FROM movies;
+        Select - key word
+        * - every column in the table
+        From - says to get data
+        movies - where the data should be retrieved
+        ; - end of line
+
+    CREATE TABLE actors (name VARCHAR(50));
+        Create - tells database to create something
+        Table - tells db what to create
+        Actors - table name
+        (name) - column named 'name'
+        Varchar - type of column
+        (50) - can store strings up to 50 characters
+
+    CREATE TABLE movies (title VARCHAR(200), year INTEGER);
+        Create - tells database to create something
+        Table - tells db what to create
+        Movies - table name
+        (title) - column name 'title'
+        Varchar - type of column
+        (200) - can tore strings up to 50 characters
+        , - next column
+        year - column name 'year'
+        Integer - column type
+
+INSERT INFO INTO TABLE:
+    INSERT INTO movies VALUES("Avatar", 2009);
+        Insert into - says to insert specific info into specific table
+        Movies - table name
+        Values - Key word
+        ('Avatar', 2009); - values store, order is important as it should be in the same order as the columns in
+            the table
+
+
+
+
+
+
+
+
+
+
+
+          

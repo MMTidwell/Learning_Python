@@ -1,0 +1,235 @@
+
+                                        >>> Basic Operators <<<
+MATH AND BOOLEAN
+    TRUTH TABLES ON PAGE 93-94!!!
+    PEMDAS Method
+        float- the remainder after division
+        + 	Plus
+        - 	Minus
+        / 	Divide
+        .0 	Divide actual (with remainder)
+        * 	Multiply
+        ** 	Squared
+        % 	Remainder after divide
+        //    Backslash
+        += 	Adding
+        -= 	Subtraction
+        /=    Divide
+        //=   Floor Division
+        *=    Multiply
+        **=   Squared
+
+    BOOLEAN
+        and       Only True if both are True
+        or        True unless both are False
+        not       opposite of True or False
+        not(or)   Only True if both are False
+        not(and)  Only False when both are True
+        is        Equality, same as '=='
+        !=	    Not equal to
+        ==	    Equal to
+        < 	    Less Than
+        >= 	    Greater than or equal to
+        <= 	    Less than or equal to
+        <>        Not equal to
+
+CONVERSION AND MEANING
+    THESE ARE ALL USED WITH THE % BEFORE THE LETTER
+    IF YOU ARE USING MORE THAN 1 IN A STRING THEN THEY WILL BE SHOWN (VARIABLE, VARIABLE, VARIABLE)
+        %d	    Signed integer decimal.
+        %i	    Signed integer decimal.
+        o		Unsigned octal.	(1)
+        u		Unsigned decimal.
+        x		Unsigned hexadecimal (lowercase).
+        X		Unsigned hexadecimal (uppercase).
+        e		Floating point exponential format (lowercase).
+        E		Floating point exponential format (uppercase).
+        f		Floating point decimal format.
+        F		Floating point decimal format.
+        g		Same as "e" if exponent is greater than -4 or less than precision, "f" otherwise.
+        G		Same as "E" if exponent is greater than -4 or less than precision, "F" otherwise.
+        c		Single character (accepts integer or single character string).
+        %r	    String (converts any python object using repr()).	(converts raw data)
+        %s	    String (converts any python object using str()).
+        %		No argument is converted, results in a "%" character in the result.
+        {}      Used when doing .format() at the end (this is much more simple than %conversion)
+
+FORMATTING
+    .format()		            inserts variable inside {} when in string.
+    .round()		            rounds floating number
+    .float()                    turns number into a float
+    int()			            turns string into integer (whole number, even when '.' is used)
+    len()			            length of variable inside the ()
+    = open()		            opens file  **EX 15**
+    .close()		            closes file  **EX 16**
+    .read()		                prints file (can not edit)  **EX 15**
+    .readline 	                prints out first line
+    .readlines	                prints out all lines
+    .truncate() 	            file size  **EX 16**
+    .write() 		            writes to file  **EX 16**
+    .seek()		                finds area in file (index #)
+    del                         deletes item for you
+    .isdigit()                  checks to see if input is a integer
+    .upper()                    turns all letters into uppercase
+    .lower()                    turns all letters into lowercase
+    break                       used to get out of loops, even when true
+    continue                    forces loop to continue within even if false
+    .isalpha                    checks to ensure letters exist
+    for __ in enumerate(__):    gives back the step and value you are at in the loop
+    **kwargs                    unpacks dicts
+    *step                       unpacks tuples and list
+    .find("")                   finds what you rae looking for inside of the variable
+    .replace(old, new)          finds old in string and replaces it with the new
+
+ESCAPE SEQUENCES
+    '\\'		    Backslash
+    '\''		    Single-quote
+    '\"'		    Double-quote
+    '\a' 		    ASC11 bel (BEL)
+    '\b' 		    ASC11 backspace (BS)
+    '\f'		    ASC11 form feed (FF)
+    '\n' 		    ASC11 linefeed (LF) (used like this=> 2 lines. At then of string=> creates 1)
+    \N{name}	    Character named name in Unicode database (Unicode only)
+    \r 			    ASC11 carriage return (CR)
+    \t 			    ASC11 horizontal tab (TAB)
+    \uxxxx 		    Character with 16-bit hex value (Unicode only)
+    \Uxxxxxxxx 	    Character with 32-bit hex value (Unicode only)
+    \v 			    ASC11 vertical tab (VT)
+    \ooo			Character with octal value oo
+    \xhh			Character with hex value hh
+
+LISTS
+    []	                Empty string
+    [0]	                First index in list
+    [-1]	            Last index in list
+    [x]	                Specific index number
+    [x:]	            Everything after x is printed
+    [:x] 	            Everything before x is printed
+    [x:x]	            Everything between 2 specific index numbers
+    [::#]               '::'-list is splitting, '#'-steps splitting
+    [#::#]              First '#'- start, '::' list splitting, second '#'- steps splitting
+    [::-1]              Calls the list backwards
+    [#:#:-1]            First '#'- end number, Second '#'- start number, '-1'- backwards
+    list[#] =           changes the value of the index
+    cmp(list1,list2)    compares elements in both lists
+    len(list)           length of list
+    max(list)           largest value in list (length of word/number)
+    min(list)           smallest value in list (length of word/number)
+    .count()            how many times the () occurs in list
+    .extend()           appends the contest of () to the list
+    .split(' ')         splits string where there is ' '
+    ' '.join()          turns list into a string
+    .append()           adds to the end of the list
+    .remove()           removes from list.
+    .index()            returns the lowest index () occurs
+    .insert()           inserts at that index
+    .pop()              removes and returns last object from list (look this up!)
+    .reverse()          reverses objects in list in place
+    .sort()             sorts smallest to largest
+    .sorted()           sorts list in alpha
+    range(low,high)     checks between x and y, returns everything in-between but does not 'count' the last one
+
+CLASSES BUILT IN
+    __dict__:                 Dictionary containing the classes namespace
+    __doc__:                  Class documentation string or none, if undefined
+    __name__:                 Class name
+    __module__:               Module name in class is defined. This is "__main__" in interactive mode
+    __bases__:                Empty tuple containing the base classes, in order in the base class list
+    __del__()                 Deletes class
+    __init__(self{,args...])  Constructor with optional arguments
+    __repr__(self)            String representation
+    __str__(self)             Printable string representation
+    __cmp__(self, x)          Object comparison
+
+DICT
+    del dict['name']      deletes field 'name'
+    dict.clear()          deletes all entries in dict, will return {}
+    del dict              deletes entire dict
+    cmp(dict1, dict2)     compares both dicts
+    len(dict)             total length of dict (number of items)
+    str(dict)             printable string of dict
+    type(dict)            returns dict type
+    dict.copy             returns a shallow copy of dict
+    dict.items()          returns a list of dicts
+    dict.update(dict2)    adds dictionary dict2 key values pairs to dict
+    dict.values()         returns list of dict values
+
+EXIT SYS
+    exit (0)      Clean exit from program
+    exit (1)      Error in program and program exits due to that
+
+DATES AND TIME
+    datetime.now()        what today's date and time is down to millisecond
+    datetime.delta()      controls days, hours, min
+    .date()               prints today's date
+    .time()               prints time
+    time.ctime()          prints current time (day, month, day, hour:min:sec, year)
+    time.sleep()          waits times in sec given between ()
+    .combine()            prints date and time together
+    .strftime()           string form time
+    .strptime()           string parsed into time=> makes a datetime from a string
+
+IMPORT MODULES
+    from random import randint
+    import datetime
+    from __future__ import print_function
+    import webbrowser
+    import os
+    import turtle
+
+ASSERT METHODS FOR TESTING
+    assertAlmostEqual(a, b)	            round(a-b, 7) == 0
+    assertNotAlmostEqual(a, b)	        round(a-b, 7) != 0
+    assertGreater(a, b)	                a > b
+    assertGreaterEqual(a, b)	        a >= b
+    assertLess(a, b)	                a < b
+    assertLessEqual(a, b)	            a <= b
+    assertRegexpMatches(s, r)     	    r.search(s)
+    assertNotRegexpMatches(s, r)  	    not r.search(s)
+    assertItemsEqual(a, b)	            sorted(a) == sorted(b) and works with unhashable objs
+    assertDictContainsSubset(a, b)	    all the key/value pairs in a exist in b
+
+REGULAR EXPRESSIONS
+    BASICS
+        r                       raw string
+        re.match                only checks the beginning of the string
+        re.search               checks the whole txt file
+        os.listdir()            list all of the files in directory
+        os.rename(old, new)     renames file
+        os.getcwd()             gets current working directory path
+        os.chdir                changes directory
+
+        \w    any Unicode word or character (upper, and lower case, number and  _.)
+        \W    anything that isn't a Unicode character
+        \s    any whitespace
+        \S    anything that isn't whitespace
+        \d    any number from 0-9
+        \D    anything that isn't a number
+        \b    word boundaries or edges of a word
+        \B    anything that isn't the edge of a word
+
+    ESCAPES
+        {3}       something that occurs exactly 3 times
+        (,3}      something that occurs 0 - 3 times
+        {3,}      occurs 3 or more times
+        {3,5}     occurs 3 - 5 times
+        ?         occurs 0-1 times
+        *         occurs at least 0 times
+        +         occurs at least once
+
+    SETS
+        [aple]    apple
+        [a-z]     any lowercase letters from a - z
+        [^2]      anything that is not 2
+
+SPECIAL
+    .open()         opens web page
+
+TURTLE
+    turtle.Screen()     creates screen
+    .bgcolor()          give screen color
+    turtle.Turtle()     creates turtle
+    .shape()            changes pointer >>> “arrow”, “turtle”, “circle”, “square”, “triangle”, “classic”
+    .color()            changes line color
+    .speed()            changes speed >>> 1 -> slowest, 10 -> fast, 0 -> fastest
+

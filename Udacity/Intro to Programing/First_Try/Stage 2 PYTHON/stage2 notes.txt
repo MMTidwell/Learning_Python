@@ -1,0 +1,1266 @@
+# Lesson 2.1: Introduction to Serious Programming
+
+	# Programming is grounded in arithmetic, so it's important
+	# to know how programming languages do simple math.
+	# Thankfully, Python follows the same math rules people do.
+	# See if you can predict the output of this code.
+
+	# https://www.udacity.com/course/viewer#!/c-nd000/l-4180729266/m-48652460
+
+	print 3
+	print 1 + 1
+
+	# Web Crawler-collects data from the web. It is like a seed 
+		# that moves from page to page following links to other pages
+		# in order to provide information that you will use for your search
+		# engine. A web page is a chunk of text from the Internet to your
+		# web browser.
+	# programing is the core of computer science. 
+		# computer- a universal machine that can do anything with a program,
+			# the computer without a program it can not do anything. A computer 
+			# can interpret billions of instructions in 1 second. 
+		# program- tells the computer what steps to take.
+		# precise sequence of steps- the code that you give the computer to
+			#follow.
+		# computation- anything that we can imagine, anything that we can 
+			#figure out how to write a program for, we can make a computer do.
+		# high-level language- running our program in python instead of 
+			# directly on the computer. 
+		# input-code written for python to place on the computer
+		# interpreter- runs our programs ad i interpret them, executes the program
+			# we write in Python language by running a program in a 
+			# language into the computer so it can understand it directly.
+	# Getting started with Python Programing
+		# Print- the output that the program will have. Python can do 
+		# simple math, where you can also use ().
+	# Language for Python
+		# Ambiguity-The computer interprets the program the correct way, and is not
+			# read incorrectly. 
+		# Verbosity- reads exactly the way it is written, needs to have less detail 
+			# and a small amount of rules.
+	# Important notes
+		# When writing numbers in Python remember to use .0 at the end when dividing. 
+			# If you do not add the .0 at the end it will run a code error. 
+	# Debugging-This practice session will focus on debugging, which is one of the 
+		# five ways programmers think. Python requires code be written with a very 
+		# specific syntax. This means that small typos can lead to big problems
+		# White space does not matter after "print"
+# 2.2 Variables and Strings
+
+	# Variables
+		# Programmers use variables to represent values in their code.
+		# This makes code easier to read by telling others what values
+		# mean. It also makes code easier to write by cutting down on
+		# potentially complicated numbers that repeat in our code.
+	# We sometimes call numbers without a variable "magic numbers"
+		# It's best to reduce the amount of "magic numbers" in our code
+
+	# https://www.udacity.com/course/viewer#!/c-nd000/l-4192698630/m-48660987
+
+	speed_of_light = 299792458.0
+	billionth = 1.0 / 1000000000.0
+	nanostick = speed_of_light * billionth * 100
+	print nanostick
+	
+	# What is a variable? names that help keep track of values, and use a name
+		# assigned to the variable. Assignment statement: Name = Expression
+		# which turns into speed_of_light = 299792458.0. The value of the name
+		# is the value that it refers to. 
+	# What does it mean to assign a value to a variable?
+		# Variables can vary, and once they are defined we can change the variable.
+		# and use the name again to change the outcome. 
+	# What is the difference between what the equals = means in math versus in 
+		# programming. What's the difference between this: 2 + 3 = 5 and this:
+	# my_variable = 5 ?
+		# = does not mean equals, it means assignment. 
+		# When writing a equation in math you will see the formula on the left and 
+		# solution on the right. While writing in python you will want to focus on 
+		# the solution side first, in order to create the equation in the print line. 	
+
+	
+	# https://www.udacity.com/course/viewer#!/c-nd000/l-4192698630/m-48700403
+
+	print 'Hello'
+	print "Hello"
+
+	hello = "Howdy"
+	print hello
+
+	# Strings- a series of letters surrounded by '' or "" (you can use both but be 
+		# consistent. Keep in mind that if you are going to use a ' within a string 
+		# then it is best to use "". If you are going to print text then you will 
+		# have to use quotes. If you try to do print hello then it will not work,
+		# you will get an error message that says the variable is not defined. 
+		# Example: 'I am a string!'
+	# Concatenation- placing 2 or more strings together using the + symbol. It will 
+		# not have a space between the 2 strings.
+		# Example: 'string' + 'string' = stringstring
+		# Example: 'string ' + 'string' = string string
+		# Example: 'string ' + 'string' + '!' = string string!
+		# Adding numbers into strings is not possible and you will get an error.
+		# However when you do '!' * 3 = !!!
+	# Indexing Strings
+		# <string> [<expression>]
+		# Have to start at 0, so if you use the expression 4 on a 4 letter sting 
+		# you will get a error message.
+		# You can however use negative numbers. This will count from the back of 
+		# the string. 
+		# Example:
+			# name = "Dave"
+			#		  0123
+			# print name [0] -> "D"
+	# Selecting Sub-Sequences
+		# A string that is a subsequence of the characters in a string starting
+			# from the first expression. Then stopping on the last expression.
+		# Example:
+			# <sting> [<expression>:<expression>]
+			#		number(start)	number(stop)
+		# Example:
+			# name="Tim"
+			# print name [1:2] -> T
+			# Note here that if you do [2:2] you will not get anything since there is 
+				# not a continuing string. 
+		# Example:
+			# name="Tim"
+			# print name [1:] -> im
+			# Note here that you do not have to have a number after or before the :, 
+				# but if you do not then it will pull the remaining or beginning of 
+				# the string. You could also do [:], this will pull the whole word.
+		# Example:
+			# s= "audacity"
+			# print "u" + s[2:]
+	# Finding Strings in Strings
+		# Find is actually a method that is a built in procedure provided by Python.
+		# <string>.find (<string>)
+			# string that we are searching.find('word you are looking for')
+		# The out put of find is the position where the sub-string is found. It 
+			# will give the first position in the search string where the target
+			# string appears.
+		# If the target string is not found then it will give you a -1 result.
+		# When using .find it is ok to have ' and " and mixing them. 
+			# Example:
+				# "test".find ('st') will have a positive result.
+		# This segment is just a chance for you to play around with 
+			# finding strings within strings. Read through the code and 
+			# press Test Run to see what it does. Is there anything 
+			# interesting or unexpected?
+			print "Example 1: Finding substrings in a string"
+			print "test".find("te")
+			print "test".find("st")
+			print "test"[2:]
+
+			print "Example 2: Finding substrings in a string which is stored as a variable"
+			my_string = "test"
+			print my_string.find("te")
+			print my_string.find("st")
+			print my_string[2:]
+
+			print "Example 3: Printing out everything after a certain substring"
+			my_string = "My favorite color: blue"
+			color_start_location = my_string.find("color:")
+			favorite_color = my_string[color_start_location:]
+			print favorite_color # oops, this line prints out 'color: ' as well...
+			print favorite_color[7:] # this fixes it!
+
+			print "Example 4: Other interesting things about string.find()..."
+			print "text".find("text") # prints 0
+			print "text".find("Text") # prints -1
+			print "text".find("")     # prints 0
+			print "text".find(" ")    # prints -1  
+	# Finding Strings with Parameter
+		# Parameters are what goes inside the parentheses. The final output is the 
+		# number of the position in the search string, where the target string
+		# appears. The first occurrence after the number. 
+		# Example: <string>.find("string" + "number").
+			print "Example 1: using find to print the second occurrence of a sub-string"
+			print "test".find("t")
+			print "test".find("t", 1)
+
+			print "Example 2: using a variable to store first location"
+			first_location = "test".find("t") # here we store the first location of "t"
+			print "test".find("t", first_location+1) # then we use that location to 
+				#find the second occurrence.
+
+			print "Example 3: using find to get rid of exclamation marks!!"
+			example = "Wow! Python is great! Don't you think?"
+			first = example.find('!')
+			second = example.find('!', first + 1)
+			new_string = example[:first] + example[first+1:second] + example[second+1:]
+			print new_string # oops, I should probably replace the !s with periods
+			new_string = example[:first] +'.'+ example[first+1:second] +'.'+ example[second+1:]
+			print new_string
+# Stage 2.2: Work Session 2
+
+	# Summarize what we have learned and turn them into big ideas. 
+		# What is a variable in Python?
+		# What does it mean to assign a value to a variable? How do you do it?
+		# What is the difference between what the equals sign = means in 2+3=5
+			# and my_variables=5?
+		# What are some ways that variables are useful?
+		# What is the difference between 2+2 and "2"+"2"?
+
+	# You can use both single ('') and double ("") or sometimes even
+		# triple ("""/''') quotes in strings. A great  example of when you
+		# would need to use both is:
+			# div_with_class = '<div class= "concept-description">'
+		# Triple quotes would be used when printing a multi-line string.
+	# Concatenation example with substrings and replacing words:
+		# sentence= 'A NOUN went on a walk. It can VERB really fast.'
+		# substring1= sentence [:2] (before NOUN)
+		# substring2= sentence [6:-17] (after NOUN, before VERB)
+		# substring3= sentence [-13:] (after VERB)
+		# noun_replacment = cat
+		# verb_replacment = ran
+		# new_sentence= substring1 + noun_replacement + substring2 + verb_replacment
+			# + substring3
+		# print new_sentence
+	# .replace method- this method is very similar to the .find method with 
+		# fewer steps, and used to find a word or phrase then replace it with 
+		# another. sting.replace('old', 'new')
+			# Example: 
+				text= "this is a string example....wow!"
+				print text.replace('is', 'was')
+				# result: "this was a string example....wow!"
+			# Example:
+				text= "this is a string example....wow!"
+				print text.replace('is', 'was', 3)
+				# result: "thwas was a string example....wow!"
+			# Example changing several words at a time:
+				sentence= "A NOUN..., a VERB..."
+				sentence= sentence.replace("NOUN", "duck")
+				#entence= sentence.replace("VERB", "waddle")
+# 2.3 Input -> function -> Output
+
+	# Functions (also known as procedures or methods) take input and return an 
+		# output. Programmers use functions all the time! They may seem confusing
+		# at first but the more you use and make them, the better you'll get!
+
+	# https://www.udacity.com/course/viewer#!/c-nd000/l-4141089439/m-48667860
+
+	def rest_of_string(s):
+	    return s[1:]
+
+	print rest_of_string('audacity')
+
+	# Input- this is what you put into a function to tell it what to do and 
+		# how it is done.
+	# Output- is the return and result of the function.
+	# Functions (also known as procedures or methods) take input and return an 
+		# output. Functions are bits of codes that you can call repetitively.
+		# Functions can be defined once and used many times as needed. There can
+		# be any number of inputs, but it has to have the number of inputs the 
+		# function expects. When we do not have enough inputs in the parameters 
+		# then it will give us an error message. 
+	# Using Functions	
+	# <function>(<input>,<input>,...), 
+		# def some_function():
+			# Some code the function runs go here
+		# print "Hello World!"
+	# Local Scope:  refers to is a variable that you make inside the function 
+		# but it does not exist outside of the function. 
+	# Global Scope: is where a variable will be available at all times. It is 
+		# best to avoid using global variables because it is easier to make mistakes.
+		# Example:
+			a = 6
+			def some_function():
+				a = 5
+			print "Local: " + str(a)
+			some_function()
+			print "Global: " + str(a)
+			# result: 
+				# Local: 5
+				# Global: 6	
+	# Inputs vs Outputs example:
+		# def say_hello(name):    		def=>making			name=>input/ making
+			# greeting = "Hello"+name+"!"	
+			# return greeting								return=>output
+		# print say_hello("Miriam")		"Miriam"=>using		print=>output
+		# print say_hello("Andy")		say_hello=>using	name=>input
+		# result
+			# Hello Miriam!									result=>output
+			# Hello Andy!				Hello Andy=>using
+	# Mathematical function examples:
+		# INC function
+			# def inc(n):
+				# return n + 1
+			# => This will take a number as input, and outputs that number 
+				#plus one
+		# SUM function:
+			# This does not do much other than have an output of "None". 
+				# The reason for this is due to the return line not being there and 
+				# there being no value in the numbers. It does modify the value but 
+				# the caller can not see this. 
+			# Example:
+				def sum(a, b):
+					a = a + b
+				print sum (1+1)
+				# result
+					# None
+			# In order for the sum statement to work we will need to add the return line.
+				# When this is done it will take the two numbers as its inputs and outputs
+				# the sum. It also takes the two strings as its inputs and outputs the 
+				# concatenation of the two strings. 
+				# Example:
+					def sum(a, b):
+						a = a + b
+						return a
+					print sum (1+1) 
+					# result
+						# None
+		# Adding:
+			def add_two_numbers(number_1,number_2):
+				return number_1 + number_2
+			print add_two_numbers(4,3) # => 7
+			print add_two_numbers(2,6) # => 8
+			print add_two_numbers(0,9) # => 9
+		# Subtracting:
+			def subtract_two_numbers(number_1,number_2):
+				return number_1 - number_2
+			print subtract_two_numbers(4,3) # => 1
+		# Square Root:
+			# Example:
+				def square(a):
+					returns (a**2) or (a*a)
+				print square(5)
+				# returns 25
+		# Adding several numbers in a list:
+			# Example:
+				def sum3 (a, b, c):
+					return a + b + c
+				print (a + b + c)
+		# Abbaize
+			# Example:
+				def abbaize(a,b):
+					return a+b+b+a
+				print abbaize("a"."b")
+# 2.4 Control Flow and Loops: If and While
+
+	# if-> statements to control which code gets executed when.
+	# while->  loops to make code that performs the same task many times.
+
+	# We'll often write programs that need to make comparisons between values.
+	# We can do comparisons just like we do in math with the < and > signs.
+	# We can also do equality comparisons with != (not equal) and ==.
+	# Comparisons always return a Boolean value (either True or False).
+
+	# https://www.udacity.com/course/viewer#!/c-nd000/l-4196788670/e-48727556/m-48724313
+
+	print 2 < 3				#=> True
+	print 21 < 3			#=> False
+	print 7 * 3 < 21		#=> False
+	print 7 * 3 != 21		#=> False
+	print 7 * 3 == 21		#=> True
+
+	# Making Decisions: <number><operator><number>
+	# Boolean Value: either true or false
+		# If statements: used for true/ false statements
+			if <test expression>:
+				<block>
+			i=21
+			# Example:
+				def absolute (x):
+					if x<0:			# >>> DO NOT FORGET THE : AT THE END OF THE LINE!
+						x = -x
+					return x
+		# Else statements: used if the "if" statement is false
+			# Example:
+				def bigger (a, b):
+					if a>b:
+						return a
+					else:
+						return b
+			# Example:	
+				def bigger (a, b):
+					if a>b:
+						r = a
+					else:
+						r = b
+			# Example Biggest with more than 2 numbers:
+				# Example 1:
+					def biggest (a,b,c):
+						if a>b:
+							if a>c:
+								return a
+							else:
+								return c
+						else:
+							if b>c:
+								return b
+							else: 
+								return c	
+				# Example 2:
+					def biggest (a,b,c):
+						return max
+					print max (1,2,3)	
+					# result: 3
+		# True/False statements:
+			# Example:
+				def is_friend(name):
+					if name [0] == 'D':
+						return True
+					else:
+						if name [0] == 'N':
+							return True						
+						else:
+							return False
+		# Or statement: <expression> or <expression>
+			# Example:
+				def is_friend(name):
+					return name [0] == 'D' or name [0] == 'N'
+				print is_friend('Doug')
+				print is_friend('Nichole')
+				print is_friend('Fred')
+				# result: True, True, False
+			# True or False:
+				# Example:
+					def string():
+						return
+					print True or False 
+					print False or True
+					print True or True
+					print False or False
+					# result: True, True, True, False
+
+	# Loops are an important concept in computer programming.
+	# Loops let us run blocks of code many times which can be
+	# really useful when we have to repeat tasks. Loops can only 
+	# repeat the same expression until it becomes untrue. 
+
+		# Loops:
+			# while <test expression>:
+				# <blocK>
+
+	# https://www.udacity.com/course/viewer#!/c-nd000/l-4196788670/e-48686708/m-48480488
+
+	def count():
+	    i = 0
+	    while i < 10:
+	        print i
+	        i = i + 1
+
+	count() # result: 0 1 2 3 4 5 6 7 8 9
+
+		# Examples 1:
+			def count():
+				i = 1
+				while i != 10:
+					i = i +1
+					print i
+			count()
+			# result: 1.2.3.4.5.6.7.8.9.10
+		# Examples 2:
+			def count():
+				i = 1
+				while i != 10:
+					i = i +2
+					print i
+			count()
+			# result: 1.3.5.7.9.11.... (will continue forever)
+		# Example 3:
+			def remove_spaces(text):
+			    text_without_spaces = '' #empty string for now
+			    while text != '':
+			        next_character = text[0]
+			        if next_character != ' ':    #that's a single space
+			            text_without_spaces = text_without_spaces + next_character
+			        text = text[1:]
+			    return text_without_spaces
+			print remove_spaces("hello my name is andy how are you?")
+			# result: hellomynameisandyhowareyou?
+		# Example 4:
+			def print_numbers(n):
+				i = 1
+				while i <= n:
+					print i
+					i = i + 1
+			print_numbers(3)
+			#result: 1.2.3
+	# Break Statement, gives us a way to stop the loop even when the test statement is true.
+		while <text expression>:
+			<code>
+			if <break test>:
+				break 
+			more code
+
+		# Example:
+			def print_numbers(n):
+				i=1
+				while True:
+					if i>n:
+						break
+					print i 
+					i = i+1
+# 2.5 Debugging
+
+	# Bugs are going to happen and we must develop a strategy for systematically getting rid 
+	# of them. its not about spotting typos or logical errors as it is about building a correct 
+	# mental model of how the system works. You can tell if a bug is happening due to the system
+	# crashing and showing an error message. These can be hard to read, but if you look for the 
+	# number it is saying is wrong it will tell you the area of the code that is incorrect. The 
+	# last line of the error message will tell you what the issue is and to find out just what
+	# that is saying you can type the error message into a search engine and find out how to fix it. 
+
+	# Steps for Debugging
+		# Check to see if there are any comments in to code to see what the function is supposed
+			# to do. This will help others and yourself to see what is supposed to be happening. 
+			# This will also greatly help with debugging if needed. 
+		# Read through your error message, it will tell you what line has the bug in it
+		# Try small simple fixes
+		# Comment the code out and copy and paste into a new line and run it to test and modify 
+			# it until it does what you want it to do.  Then try to find the bug to see where
+			# it went wrong and try to fix the original code. This will help you to further 
+			# understand the error message as well as any further bugs that might happen. Commenting
+			# out should be done with shorter functions. With longer functions it is best to turn
+			# it into a big string by using """, or '''
+		# If you are trying to make your own code to look like something then first try to find
+			# a code on-line that is similar. If you can not then try to separate the functions
+			# in order to see what is causing the error and then adjust your code accordingly. 
+		# Separate your code into separate liens and try to print each one, this will show you
+			# what is and what is not working. 
+		# Make sure that your examples work and read out the same in other interpreters, not all
+			# programs will run the sane thing. Just because it works in one does not mean that 
+			# it will work in yours. 
+		# When code does not flag an error message but does not read the way that it is supposed to
+			# add print lines in the function to see what needs to be adjusted. 
+
+	# Tips for making comments in your code so others can read it.
+		# Don't comment on "obvious code". This will not be used and will take up valuable time.
+			# Example:
+				print "Hello"  # prints hello 
+		# Start functions with comments with the inputs, outputs and explaining what the function does.
+			# Example: 
+				def isLeapYear(year):
+					# takes a number as input and outputs True if the number represents a leap
+					# year and False otherwise. 
+			# Example:
+				def isLeapYear(year):
+					''' takes a number as input and outputs True if the number represents a leap
+					year and False otherwise'''
+		# Keeping your comments up to date, make sure that when you update anything in a function
+			# that you are constant and update the comment line as well. This will be helpful if
+			# you need to go back and update again, or if a function is no longer working. 
+		# Be concise, Comments should be short and explain only the most important details of your
+			# code. If you find yourself having to write very long comments to clarify confusing
+			# parts of your code, you may want to rethink your approach to the problem. Generally,
+			# well written code will have sparse comments. Poorly written code may depend on them!
+# Stage 2: Work Session 4
+	
+	# Random Number Generation 
+	# import random must be used at the begging of the function.
+	# "random.randint(min,max)"returns a random integer between the min and max numbers
+	# "random.randrange(min,max,step)" return a random integer between the min and max,
+		# excluding the max. the step argument is optional and will increment the min by
+		# the step until the max is reached. 
+	# "random.random()" returns a random float valued between 0 and 1. Does not have the
+		# option to take any arguments
+   
+	# Example:
+		import random
+		x = random.randint(1,10)   # >>>prints random # between 1-10<<< >>> includes max number <<<
+		y = random.randrange(1,10,2)   # >>> does not include max number <<<
+		z = random.random() 		# >>> will output a float number between 0 and 1 <<<
+	# Example:
+		import random
+		computer_number=random.randint(1,10)
+		print computer_number	
+		# result: 
+			#random number between 1-10 
+	# Example from w WORDork session with a little tweaking:
+		import random
+		def random_verb():
+		    random_num = random.randint(0, 1)
+		    if random_num == 0:
+		        return "RUN"                                                                    
+		    else:
+		        return "KAYAK"
+		        
+		def random_noun():
+		    random_num = random.randint(0,1)
+		    if random_num == 0:
+		        return "SOFA"
+		    else:
+		        return "LLAMA"
+		    
+		def random_word():
+		    random_num = random.randint(0,1)
+		    if random_num==0:
+		        return "SHOE"
+		    else:
+		        return "WATER"
+
+		def word_transformer(word):
+		    if word == "NOUN":
+		        return random_noun()
+		    elif word == "VERB":
+		        return random_verb()
+		    elif word == "WORD":
+		        return random_word()
+		    else:
+		        return word[0]
+
+		def process_madlib(mad_lib):
+		    processed=""
+		    
+		    noun_index=mad_lib.find("NOUN")
+		    if noun_index!=-1:
+		        processed = mad_lib[:noun_index]+random_noun()+mad_lib[noun_index+4:]
+		        
+		    verb_index=mad_lib.find("VERB")
+		    if verb_index!=-1:
+		        processed = processed[:verb_index]+random_verb()+processed[verb_index+4:]
+		        
+		    word_index=mad_lib.find("WORD")
+		    if word_index!=-1:
+		        processed = processed[:word_index]+random_word()+processed[word_index+4:]
+		    
+		    return processed
+
+		test_string_1 = "This WORD is a good NOUN to use when you VERB your food"
+		test_string_2 = "I'm going to VERB to the store WORD and pick up a NOUN or two."
+		print process_madlib(test_string_1)
+		print process_madlib(test_string_2)
+# 2.6 Structured Data: List
+
+	# Similar to how strings are sequences of characters, lists are
+	# sequences of anything! We can have lists of numbers, lists of
+	# characters, even lists of lists! And we can mix up the contents
+	# too so we can have lists containing many different things. One 
+	# of the advantages of having data with structure (like in a list)
+	# is that you can take advantage of that structure! One way you
+	# can do that is by directly looping through the elements of a 
+	# list with what's called a for loop.
+
+	# Difference between list and strings:
+		# Strings can only hold characters, while list can hold anything. 
+		# List support mutation, strings do not. 
+
+	# Instructor notes here at the bottom of the page: 
+		# https://www.udacity.com/course/viewer#!/c-nd000/l-4152219158/m-48683665	
+
+	# Example:
+		p = ['y', 'a', 'b', 'b', 'a', '!']
+		print p
+		print p[0]
+		print p[2:4]
+		# result:	
+			# ['y', 'a', 'b', 'b', 'a', '!']
+			# ['y']
+			# ['b', 'b',]
+	# Example of basic list:
+		print "EXAMPLE 1: List can contain strings"
+		string_list=['HTML','CSS','Python']
+		print string_list
+		# result:	
+			# "EXAMPLE 1: List can contain strings"
+			# ['HTML','CSS','Python']
+	# Example with numbers:
+		print "EXAMPLE 2: Lists can contain numbers"
+		number_list = [3.14159, 2.71828, 1.61803]
+		print number_list
+		# result:
+			# "EXAMPLE 2: Lists can contain numbers"
+			# ['HTML','CSS','Python']
+	# Example accessed and slice:
+		print "EXAMPLE 3: Lists can be 'accessed' and 'sliced' like how we accessed and sliced strings in the previous lessons"
+		pi = number_list[0]
+		not_pi = number_list[1:]  # >>> number_list is being pulled from previous example!! <<<
+		print pi   
+		print not_pi
+		# result: 
+			# "EXAMPLE 3: Lists can be 'accessed' and 'sliced' like how we accessed and sliced strings in the previous lessons"
+			# 3.14159 
+			# [2.71828, 1.61803]
+	# Example strings and numbers:
+		print "EXAMPLE 4: Lists can contain strings AND numbers"
+		mixed_list = ['Hello!', 42, "Goodbye!"]
+		print mixed_list
+		# result:
+			# "EXAMPLE 4: Lists can contain strings AND numbers"
+			# ['Hello!', 42, "Goodbye!"]
+	# Example list within list:
+		print "Example 5: Lists can even contain other lists"
+		list_with_lists = [3, 'colors:', ['red', 'green', 'blue'], 'your favorite?']
+		print list_with_lists
+		# result: 
+			# "Example 5: Lists can even contain other lists"
+			# [3, 'colors:', ['red', 'green', 'blue'], 'your favorite?']
+	# Quiz Example (basic list):
+		stooges=['Moe','Larry','Curly']
+		print stooges
+		# result:
+			# ['Moe','Larry','Curly']
+	# Quiz Example ((list and If statements!)):
+		days_in_month = [31,28,31,30,31,30,31,31,30,31,30,31]
+		def how_many_days(month_number):
+		    if month_number == 2:
+		        return 28
+		    elif month_number == 4 or month_number == 6 or month_number == 9 or month_number == 11:
+		        return 30
+		    else:
+		        return 31
+		print how_many_days(1)
+		print how_many_days(9)
+		# result:
+			# 31
+			# 30
+		### or ###
+		days_in_month = [31,28,31,30,31,30,31,31,30,31,30,31]
+		def how_many_days(month):
+			return days_in_month[month-1]
+		print how_many_days(12)
+		# result:
+			# 31
+	# Nested list is a list (or many list) inside another longer list.
+		# Example of nested list:
+		beatles=[['John', 1940], ['Paul', 1942], ['George', 1943], ['Ringo', 1940]]
+		print beatles [3]
+		print beatles [3][0]
+		print beatles [3][1]
+		# result:
+			# ['Ringo', 1940]
+			# Ringo
+			# 1940
+		# Example of nested list:
+		countries = [['China', 'Beijing', 1350], ['India', 'Delhi', 120],
+					 ['Romania', 'Bucharest', 21], ['US', 'DC', 309]]
+		print countries[0][2]/countries[2][2]
+		# result:
+			# 64
+
+	# Mutation- Modify the existing object,  so we can change the value of a list 
+		# after we have created it. Once a list had been modified then we then we
+		# have to worry about other variables that might refer to the same object. 
+		# This can only be done in lists. 
+		# string
+			s= 'Hello'
+			s= 'Yello'
+			s= s + 'w'
+			print s
+			# result:
+				# Yellow
+		# list
+			p=['H','e','l','l','o']
+			print p
+			p[0]='Y'
+			print p
+			p[4]= '!'
+			print p
+			# result:
+				# ['H','e','l','l','o']
+				# ['Y','e','l','l','o']
+				# ['Y','e','l','l','!']
+		# Quiz Example:
+			stooges = ['Moe','Larry','Curly']
+			stooges[2] = 'Shemp'
+			print stooges
+			# result:
+				# ['Moe','Larry','Shemp']
+		# Adding a new variable to the Mutated list:
+			p=['H','e','l','l','o']
+			print p
+			p[0]='Y'
+			print p
+			p[4]= '!'
+			print p
+			q=p 
+			q[4]='!'  # >>> Doing this changed the value of p as well <<<
+			print q
+			# result:
+				# ['H','e','l','l','o']
+				# ['Y','e','l','l','o']
+				# ['Y','e','l','l','!']
+				# ['Y','e','l','l','!']
+		# Example:
+			
+			print p, q
+			p[0]='Y'
+			print q
+			# result:
+				# ['H','e','l','l','o'] ['H','e','l','l','o']
+				# ['Y','e','l','l','o']
+
+	# Aliasing- when we have 2 different ways to refer to the same object. When 
+		# one of them does not work neither of them will work. Any change that we
+		# make to one of the objects, will change it in the other. 
+		
+		# Example:
+			p=['J','a','m','e','s']
+			q=p # >>> THIS IS MUTATION! <<<
+			p[2]='n'
+			print p
+			p= [0,0,7]  # >>> THIS IS ALIASING! <<<
+			print p
+			# results:
+				# ['J','a','n','e','s']
+				# [0,0,7]  >>> P CHANGES TO 007, WHILE Q STAYS WITH JANES! <<<
+		# Quiz Example:
+			spy = [0,0,7]
+			agent = spy
+			spy[2] = agent[2] + 1
+			print agent, spy
+				# result:
+					# 8
+		# Quiz Example:
+			spy=[0,0,7]
+			def replace_spy(p):
+				p[2] = p[2] + 1
+			replace_spy(spy)
+			print spy
+				# result:
+					# [0,0,8]
+
+	# List operations:
+		# .append- (like a procedure but is a method). This will allow us to add a 
+			# new element at the end of a list. This will mutate the old list, not
+			# not create a new list. 
+			<list>.append(<element>)
+			# Example with .append:
+				stooges['Moe','Larry','Curly']
+				stooges.append('Shemp')	
+		# plus- very similar to strings. Creates new list instead of editing a previous
+			# one. There is a small difference between .append and +, .append can place
+			# a list inside of a list, while + adds list together. 
+			<list> + <list> 
+			# Example:
+				[0,1] + [2,3]
+				# result:
+					[0,1,2,3]
+		# len- len = object we want to know the length of. Works for many things other
+			# than list. It will work for any object that is a collection of things. 
+			# The output of len is the number of elements in the input. 
+			# Example:
+				len ([0,1])
+				# result:
+					# 2 
+			# Example:
+				len (['a',['b',['c']]])
+				# result:
+					# 2
+			# Example:
+				len ('Udacity')
+				# result:
+					# 7
+			# Example:
+				p=[1,2]
+				p.append(3)
+				p=p+[4,5]
+				len(p)
+				# result:
+					# 5
+# Lesson 2.6: For Loops in list
+
+	# For loops, like while loops, are useful for running a block of code
+	# multiple times. For loops make iterating through elements in a list
+	# easier than using a while loop.
+
+	for <name> in <list>:
+		<block>
+
+	# https://www.udacity.com/course/viewer#!/c-nd000/l-4152219158/m-48204891
+
+			def print_all_elements(p):
+			    for e in p:
+			        print e
+
+			myList = [1, 2, [3, 4]]
+			print_all_elements(myList)
+			# result:
+				# 1
+				# 2
+				# [3,4]
+		# Example of while in list:
+			def print_all_elements(p):
+				i = 0
+				while i < len (p):
+					print p[i]
+					i = i + 1
+		# Example:
+			example_list_1 = ['a', 'b', 'c', 'd']
+			for thing in example_list_1:
+			    print thing 
+			# result: ['a','b','c',d]
+		# Example:
+			example_list_2 = [['China', 'Beijing'], ['USA'  , 'Washington D.C.'],
+		                  	  ['India', 'Delhi']]
+			for country_with_capital in example_list_2:
+			    country = country_with_capital[0]
+			    capital = country_with_capital[1]
+			    print capital + ' is the capital of ' + country
+			# result:
+				# Beijing is the capital of China
+				# Washington D.C. is the capital of USA
+				# Delhi is the capital of India
+		# Example:
+			def sum_list(p):
+				result = 0
+				for e in p:
+					result = result + e
+				return result
+			print sum_list([1,7,4])	
+			print sum_list([9,4,10])
+			# result: 12, 23
+		# Example for counting:
+			def measure_udacity(p):
+				count = 0
+				for e in p:
+					if e[0] == 'U':
+						count = count + 1
+				return count
+			print measure_udacity(['Dave','U2'])
+			# result: 1
+		# Example:
+			def find_element(p,t):
+				i = 0
+				for e in p:
+					if e == t:
+						return i
+					i = i + 1
+				return -1
+			print find_element([1,2,3]3)
+			print find_element(['alpha','beta'],'gamma')
+			# result: 
+				# 2
+				# -1
+
+	# Index list- invoked on a list where you pass in the value and the output
+		# of index is the position where that value exist in the list. If the
+		# result is not listed then instead of giving -1 as a result it will throw
+		# an error. It will always give us just the first one listed
+		<list>.index(<value>)
+		# Example:
+			p = [0,1,2]
+			print p.index(2)
+			p = [0,1,2,2,2]
+			print p.index(2)
+			p = [0,1,2]
+			print p.index(3)
+			# result:
+				# 2
+				# 2 (only sees the first 2, not the others)
+				# 3 is not in list
+
+	# in, not in- if <value> is in the <list>, output is True, otherwise it is false.
+		<value>in<list>
+		<value>not in<list>
+		# Example:
+			p = [0,1,2]
+			print 3 in p
+			print 2 in p
+			# result:
+				# false
+				# true
+		# Example with in:
+			def find_element(p,t):
+				if t in p:	
+					return p.index (t)
+				else: 
+					return -1
+			print find_element([1,2,3],3)	
+			print find_element(['alpha','beta'],'gamma')
+			# result:
+				# 2
+				# -1
+		# Example with not in:
+			def find_element(p,t):
+				if t not in p:	
+					return -1
+				else: 
+					return p.index (t)
+			print find_element([1,2,3],3)	
+			print find_element(['alpha','beta'],'gamma')
+			# result:
+				# 2
+				# -1
+	# += "add and" symbol add the right operand to the left operand and
+		# assign the result to left operand.
+			# Example:
+			list = [1,2,3,4,5]
+			list += [6,7]
+			def proc(mylist):
+				mylist +=myList
+			print list
+			proc(list)
+			print list
+			# result:
+				# [1,2,3,4,5,6,7]
+				# [1,2,3,4,5,6,7,1,2,3,4,5,6,7]
+# 2.7 How to Solve Problems
+	# Steps to solve problem:
+		# Make sure we understand the problem
+		# What are the inputs
+		# How are the inputs represented
+		# What are the outputs
+		# How are they outputs represented
+		# Work out some of the examples
+		# Don't optimize prematurely! Simple and correct
+
+	# In this lesson, you'll be working on solving a much
+		# bigger problem than those you've seen so far. If you
+		# want, you can use this starter code to write your
+		# quiz responses and then copy and paste into the
+		# Udacity quiz nodes.
+
+		# https://www.udacity.com/course/viewer#!/c-nd000/l-4184188665/m-108325398
+
+		# Simple Mechanical Algorithm
+		# days = 0
+		# while date1 is before date2:
+		#     date1 = advance to next day
+		#     days += 1
+	
+	# Step 1: Understand the question.
+		# It is asking how old am I in days.
+	# Step 2: Inputs
+		# day born (day 1), and todays date (day 2)
+	# Step 3: How are the input represented?
+		# (year1, month1, day1, year2, month2, day2)
+	# Step 4: Out puts
+		# age in days
+	# Step 5: determines if the year is a leap year or not. Sets up the 
+		# 'year' for the function. 
+		def isLeapYear(year):
+		    """if (year is not exactly divisible by 4) then (it is a common year)
+		        else if (year is not exactly divisible by 100) then (it is a leap year)
+		        else if (year is not exactly divisible by 400) then (it is a common year)
+		        else (it is a leap year)"""
+		    if year % 400 == 0:
+		        return True
+		    if year % 100 == 0:
+		        return False
+		    if year % 4 == 0:
+		        return True
+		    return False	
+	# Step 6: determines how many days are in a month. Sets up the 'month' 
+		# and adds it to the year.
+		def daysInMonth(year, month):
+		    #if month == 1 or month == 3 or month == 5 or month == 7 or month == 8 or month == 10 or month == 12:
+		    #you could also use: 
+		    if month in (1, 3, 5, 7, 8, 10, 12):
+		        return 31
+		    else:
+		        if month == 2:
+		            if isLeapYear(year):
+		                return 29
+		            return 28
+		        else:
+		            return 30
+	# Step 7: determines the next day. Sets up the 'day' and adds them to 
+		# the year and month. 	 
+		def nextDay(year, month, day):
+		    if day < daysInMonth(year, month):
+		        return year, month, day + 1
+		    else:
+		        if month == 12:
+		            return year + 1, 1, 1
+		        else:
+		            return year, month + 1, 1  
+    # Step 8: determines that date 1 is before date 2. Sets up another
+    	# 'year2, month2, day2'
+		def dateIsBefore(year1, month1, day1, year2, month2, day2):
+		    if year1 < year2:
+		        return True
+		    if year1 == year2:
+		        if month1 < month2:
+		            return True
+		        if month1 == month2:
+		            return day1 < day2
+		    return False       
+	# Step 9: counts the number of days between date 1 and date 2, starting 
+		# with 0. 
+		def daysBetweenDates(year1, month1, day1, year2, month2, day2):
+		    assert not dateIsBefore(year2, month2, day2, year1, month1, day1)
+		    days = 0
+		    while dateIsBefore(year1, month1, day1, year2, month2, day2):
+		        year1, month1, day1 = nextDay(year1, month1, day1)
+		        days += 1
+		    return days 
+	# Step 10: test with test cases, 'test()' at the bottom test the test
+		# cases to make sure that they work. If you would like to test 
+		# just one date and not use the test cases then use: 
+		# print daysBetweenDates(1984,6,22,2016,1,21), the result is: 44407
+		def test():
+	    test_cases = [((2012,1,1,2012,2,28), 58), 
+	                  ((2012,1,1,2012,3,1), 60),
+	                  ((2011,6,30,2012,6,30), 366),
+	                  ((2011,1,1,2012,8,8), 585 ),
+	                  ((1900,1,1,1999,12,31), 36523)]
+	    
+	    for (args, answer) in test_cases:
+	        result = daysBetweenDates(*args)
+	        if result != answer:
+	            print "Test with data:", args, "failed"
+	        else:
+	            print "Test case passed!"
+
+		test()	
+# Stage 2: Work session 5
+	
+	# Adding list Example(this does not work): 
+		list1 = [1,2,3,4]
+		list1 = list1 + [5, 6]
+		print list1
+		# result:
+			# [1,2,3,4]
+	# Appending list Example(.append):
+		list2 = [1,2,3,4]
+		list2.append([5, 6])
+		print list2
+		# result:
+			# [1,2,3,4,[5,6]]
+	# += Example (shown in list3):
+		list1 = [1,2,3,4,5]
+		list2 = [1,2,3,4,5]
+		def proc(mylist):
+		    mylist = mylist + [6, 7]
+		def proc2(mylist):
+		    mylist.append(6)
+		    mylist.append(7)
+		list3 = [1,2,3,4,5]
+		list3 += [9,10]
+		print "demonstrating proc"
+		print list1
+		proc(list1)
+		print list1
+		print "demonstrating proc2"
+		print list2
+		proc2(list2)
+		print list2
+		print "demonstrating proc2"
+		print list3
+		# result:
+		# demonstrating proc (+, this does nothing)
+		# [1, 2, 3, 4, 5]
+		# [1, 2, 3, 4, 5]
+		# demonstrating proc2 (.append)
+		# [1, 2, 3, 4, 5]
+		# [1, 2, 3, 4, 5, 6, 7]
+		# demonstrating proc3 (+=)
+		# [1, 2, 3, 4, 5, 9, 10]
+
+	#Data Analysis Example:
+		# imports random numbers-----------------------------------------------------------
+		import random
+
+		# creates call list for while function---------------------------------------------
+		random_list = []
+		list_length = 20
+
+		# while function creating a random list of numbers that is 20 numbers long---------
+		while len(random_list) < list_length:
+		   random_list.append(random.randint(0,10))
+
+		# creates call list for while function---------------------------------------------
+		count_list = [0] * 11
+		index = 0
+
+		# while function creating a number list stating how many times a number was used in 
+		# the 20 index list (previous function)--------------------------------------------
+		while index < len(random_list):
+		    number = random_list[index]
+		    count_list[number] = count_list[number] + 1
+		    index = index + 1
+
+		# prints header--------------------------------------------------------------------
+		print "number | occurrence"
+
+		# creates call list fro while function---------------------------------------------
+		index = 0
+		num_len = len("number")
+
+		# while loop creating a table and prints-------------------------------------------
+		while index < len(random_list):
+		    num_spaces = num_len - len(str(index))
+		    print " " * num_spaces + str(index) + " | " + str(count_list[index])
+		    index = index + 1
+
+	# Prodcut_list Example:
+		def product_list(p):
+			total = 1 # has to be one since we are multiplying numbers in a list
+			for i in p:
+				total = total * i
+			return total
+		print product_list(9)
+		print product_list([1,2,3,4])
+		print product_list([])
+		# result: 9, 24, 1
+
+	# Greatest in list Example:
+		def greatest(p):
+		    big = 0
+		    for i in p:
+		        if i > big:
+		            big = i
+		    return big
+			print greatest([4,23,1])
+			print greatest([])
+			# results: 23, 0
+
+	# String .split method- turn sting in to a list
+		# Example:
+		string1 = "Yesterday, So and so went to the store"
+		list1 = string1.split()
+		print list1
+		# result: ['Yesterday,', 'So', 'and', 'so', 'went', 'to', 'the', 'store']
+
+	# Word_in_POS Example:
+		def word_in_pos(word, parts_of_speech):
+		    for pos in parts_of_speech:
+		        if pos in word:
+		            return pos
+		    return 
+		test_cases = ["NOUN", "FALSE", "<<@PERSON><", "PLURALNOUN"]
+		parts_of_speech = ["PERSON", "PLURALNOUN", "NOUN"]
+
+		print word_in_pos(test_cases[0], parts_of_speech)
+		print word_in_pos(test_cases[1], parts_of_speech)
+		print word_in_pos(test_cases[2], parts_of_speech)
+		print word_in_pos(test_cases[3], parts_of_speech)
+		# result: NOUN, None, PERSON, PLURALNOUN
+
+	# Play_game Example:
+		parts_of_speech  = ["PLACE", "PERSON", "PLURALNOUN", "NOUN"]
+		test_string = """Straight outta PLACE, crazy NOUN named PERSON, 
+		from the gang called PLURALNOUN Wit Attitude"""
+
+		def word_in_pos(word, parts_of_speech):
+		    for pos in parts_of_speech:
+		        if pos in word:
+		            return pos
+		    return None
+		        
+		def play_game(ml_string, parts_of_speech): 
+		    replaced = []
+		    ml_string = ml_string.split()
+		    for word in ml_string:
+		        replacement = word_in_pos(word, parts_of_speech)
+		        if replacement != None:
+		            word = word.replace(replacement, 'corgi')
+		            replaced.append(word)
+		        else:
+		            replaced.append(word)
+		    replaced = ' '.join(replaced)
+		    return replaced
+		        
+
+		print play_game(test_string, parts_of_speech)    
+		# result:
+			# Straight outta corgi, crazy corgi named corgi, from the gang called corgi Wit Attitude
+
+
+
+
+
+
+
+
+
+
+
+# Videos to watch if you get stuck!
+# Tips for sublime coding: 	https://www.udacity.com/course/viewer#!/c-nd000/l-4137319262/m-5143940810
+# Python Basics: 	https://www.udacity.com/course/viewer#!/c-nd000/l-4141089439/m-4648225060
+# Problem Solving 1 & 2: 	https://www.udacity.com/course/viewer#!/c-nd000/l-4141089439/m-4634239558
+# Debugging: 	https://www.udacity.com/course/viewer#!/c-nd000/l-4146130474/m-4313818959
+# Loops:	 https://www.udacity.com/course/viewer#!/c-nd000/l-4152219158/m-4311528552
+# Tic-Tac-Toe Game:	 https://www.udacity.com/course/viewer#!/c-nd000/l-4152219158/m-4678316081
+# How to solve problems: 	https://www.udacity.com/course/viewer#!/c-nd000/l-4184188665/m-4302169530

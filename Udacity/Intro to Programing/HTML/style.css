@@ -1,0 +1,27 @@
+
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.image {
+    max-width: 460px;
+    <!--display: flex; (flex made it difficult to view)-->
+}
+.description {
+    color: black;
+    font-weight: bold;
+    max-width: 705px;
+}
+.app {
+    display: flex;
+}
+.title{
+    background-color: 33BEBE;
+    color: white;
+    font-family: 'Roboto', 'Noto', sans-serif;;
+    height: 50px;
+    text-align: center;
+}

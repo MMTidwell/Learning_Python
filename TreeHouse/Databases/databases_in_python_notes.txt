@@ -1,0 +1,24 @@
+ORM => Object Relational Mapping
+    a soft wear that turns your objects into rows in your database and vis versa
+Models => like classes
+    turn attributes into columns in your table
+
+.save() => adds a row to the table
+
+PEEWEE (installed)
+Models => are python classes
+    column => rea attributes in classes
+
+QUERIES
+.create()           Adds a new row to table
+.select()           Selects a row out of table
+.save()             saves info
+.get()              gets single record
+.delete_instance()  deletes row
+
+CRUD
+C => Create
+R => Read
+U => Update
+D => Delete
+

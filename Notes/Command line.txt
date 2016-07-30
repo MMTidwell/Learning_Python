@@ -1,0 +1,223 @@
+-----------------------------------------------------------------------------------------------------------------------
+ Basic Commands
+-----------------------------------------------------------------------------------------------------------------------
+     ls                  list directories, we will see different colors representing diff types of files
+     ls -l               lists the files in a longer form
+                             ex: drwxrwxr-x 2 treehouse treehouse 4096 Oct 10 13:55 documents
+                                 (1st,group,public) (user and group name) (size) (date and time) (file name)
+     ls -a               lists all files, including dotfiles
+     ls -t               order files and directoreis by the time they were last modified
+     ls /(folder_name)   shows all files within that folder
+     clear               moves the command promt to the top of the screen, you can still scroll up
+     pwd                 print working directory (this shows the path you are currently in)
+     cd                  change directory
+     cd /(folder_name)   takes you out of that directory
+     cd ..               takes you back a directory
+     cd ../..            takes you back 2 directories
+     ~                   home directory
+     touch               Builds file
+
+
+-----------------------------------------------------------------------------------------------------------------------
+ File and Directory Commands
+-----------------------------------------------------------------------------------------------------------------------
+     less    a program that displays the content of a file
+     q       quits out of the command
+     more    a program that shows the whole file. It will quit automatically when a the end
+     cat     prints the contents of one or more files to the console (looks like it is just printing)
+
+ Moving Files
+     mv old_name.txt new_name        moves, renames, or change file type
+     mv file_name folder_name        moves the file into another folder
+     mv folder_name/file_name ..     move file back a folder
+
+ Copy Files/Folders
+     cp file_name                    copies a file or directory, works like mv but leaves the original where it was
+     cp -r old_folder_name new_f_n   copies recursively(copies contents of folder) to the same file but changes the name
+
+     Delete Files/Folders
+     rm file_name            removes file, this is permanent and can not be pulled out of trash
+     rm -r folder_name       removes folder, this is permanent and can not be pulled out of trash
+
+     Making a Directory
+     mkdir                                   makes a directory
+     mkdir -p folder/folder/folder/file      builds folders w/in folders and a file at the end
+
+ Permissions
+     Permissions         Read(r), Write(w), Execute(x)
+         Who can do what     User(u), Group(g), Other(o)
+           u   g   o
+          --- --- ---
+         drwx rwx rwx
+         d => file rwx permissions for each u g and o
+     chmod who +/- permission file_name      changes the permissions of a file or directory
+     Octal Notation                          numerical representation using the digits 0 - 7
+         7 rwx   3 -wx
+         6 rw-   2 -w-
+         5 r-w   1 --x
+         4 r--   0 ---
+     chmod 777 file_name         changes the files permissions
+
+ File Ownership
+     chown                               changes the owner of the file
+     sudo chown user_name file_name      changes the owner of the fi
+
+
+
+-----------------------------------------------------------------------------------------------------------------------
+ Nano
+-----------------------------------------------------------------------------------------------------------------------
+ Editing Files - We will need a text editor, nano(the one we are using)
+ nano is a line text deiotr. It works like a desktop text editor like Notepad, excpet that it is a accessible from the
+ command line and only accepts keyboard input.
+     nano file_name.txt      opens the file that we are editing, there are controls at the bottom
+     alias                   allows you to create keyboard shortcuts
+     source                  makes the changes available right away
+
+
+-----------------------------------------------------------------------------------------------------------------------
+ New User
+-----------------------------------------------------------------------------------------------------------------------
+     whoami              displays the user you are currently logged in as
+     sudo adduser        adds user, asks for password, fill in user info, not critically necessary
+
+     Log in as new user
+     su user_name        switch user
+     exit                takes you back to the previous user
+
+
+-----------------------------------------------------------------------------------------------------------------------
+ Sudo
+-----------------------------------------------------------------------------------------------------------------------
+ Root overrides all permissions on the comp and can do anything. If you know the password then you can do what it is
+ that you need to do. It is best to not do this unless it really has to be done. There is a way around not using the
+ root, but still acting like the root. Be careful when doing this as the only safety guard is asking for your assword.
+     sudo command what_needs_to_be_done
+     !!      represents the most recently run command, and prints it, user must have permissions to use this.
+
+
+
+-----------------------------------------------------------------------------------------------------------------------
+ Processes
+-----------------------------------------------------------------------------------------------------------------------
+ Processes are instances of running programs on your computer. You can run multiple instances of a single program by
+ creating multi processes. Understanding how processes work is crucial for using the console effectively.
+
+     top       a task manager that lets you view processes, this will give us an up to date usage, data, and memory. This
+               updates every couple of min based on its sort.
+     PID       Process ID they start at 1 and go up
+     ps        lists out the processes that we are running
+     ps aux    view a full list of processes
+
+
+-----------------------------------------------------------------------------------------------------------------------
+ Job
+-----------------------------------------------------------------------------------------------------------------------
+ Job are a process that really belongs to you. These can be paused and come back to at a later time
+     Ctrl + z    stop or pause the current process, this will not save anything other than where you are at. Once it is
+                 paused it will give you a number before the name of the file. Then it will say if it was paused or stopped.
+     fg          to return back to the job (bring the most recently stopped program to the foreground), this will
+                 foreground the last job that was opened.
+     fg #        will open the job that you call on
+     jobs        prints the list of jobs in this session
+     +           is the one that will run by default
+
+
+-----------------------------------------------------------------------------------------------------------------------
+ Killing Process
+-----------------------------------------------------------------------------------------------------------------------
+ Killing process should only be done if there are no other options as this could corrupt your data or completely elete
+ it. However there are several ways around this.
+     signal              a message sent to a process by the operating system
+     TERM(terminate)     request that the process terminates after any cleanup
+     ctrl + c            will send the term signal
+     kill ####           terminates the process
+     kill -TERM ####     2nd force of terminate
+     kill -kill ####     final choice, overrides the system (don't do this unless it is your final choice)
+     kill -STOP ####     pauses the job
+
+
+-----------------------------------------------------------------------------------------------------------------------
+ Environment Variables
+-----------------------------------------------------------------------------------------------------------------------
+ Environment Variables store configuration info on your computer. They are all written in upper case, and the values they
+ hold are strings. We can make our own variables but there are several already in the console.
+     Home                    path to your home directory
+     Path                    list of locations where variables are stored
+     PS1                     the format of the command line prompt
+     VARIABLE=value          set a local environment variable
+     export VARIABLE=value   set an environment variable that will be visible to child processes
+     env                     view environment variables
+     bash                    start a new session within your current session
+     echo                    display the arguments sent to echo
+     echo $VARIABLE          echo will print the actual value, not the words
+     PS1="value"             changes layout of prompt
+     MESSAGE="value"         prints out message when called on by echo
+     export VARIABLE="value" passes the variable down to the child
+     which                   prints the location of a program
+
+-----------------------------------------------------------------------------------------------------------------------
+ Find, Grep, Sed
+-----------------------------------------------------------------------------------------------------------------------
+     find . -name "search"       look for files with the name search starting from your current location
+     .                           current directory and bellow
+     find / -name "search"       looks for files in the whole computer
+     grep "pattern" file         find any lines that contain the pattern in the given file
+     grep -n "pattern" file      finds all lines with the pattern as well as gives the line number
+     grep -i "pattern" file      finds all lines with the pattern and is not case sensitive
+     grep -v 'pattern' file      shows lines w/o the pattern
+     grep -R                     searches all files in a directory and outputs filename and lines containing match
+     grep -Rl                    searches all files in directory and outputs only the filename with match
+     grep                        searches for a specific pattern and filters only the lines that have it on it
+     ps aux | grep 'top'         this will give you the lines that you are looking for
+     man grep                    grep manual
+     man find                    find manual
+     sort                        sorts the lines of standard input and sends it to standard output
+     uniq                        pulls 1 of each items in a file
+     sed                         takes standard input and modifies it based on expression before output. like find and replace
+
+
+-----------------------------------------------------------------------------------------------------------------------
+ Pipes
+-----------------------------------------------------------------------------------------------------------------------
+     somecommand < inputfile     redirects standard input to a command
+     somecommand > outputfile    redirect output of command to a file, overwriting previous content
+     somecommand >> outputfile   appends to file
+     command1 | command2         pep the output of command1 to the input of command2
+     ctrl d                      sends end of file to the op, exiting you out of the system
+
+
+-----------------------------------------------------------------------------------------------------------------------
+ Redirect
+-----------------------------------------------------------------------------------------------------------------------
+     find / -name 'sudoers' 2> error_log.txt     builds a error log file
+     find / -name 'sudoers' 2> /dev/null         anything that goes into this file will disappear
+
+
+-----------------------------------------------------------------------------------------------------------------------
+ Building Software From Source
+-----------------------------------------------------------------------------------------------------------------------
+ Steps
+     Download
+     Untar file
+     Run ./configure script
+     Run make command
+     Run sudo make install
+
+     sudo apt-get update                 Update your computer's catalog of available software
+     sudo apt-get install-essential      install the tools needed to build software from source code
+     curl -O URL                         download the file at the url
+
+     tar -xvf FILENAME.tar.gz            decompress (unzips it) the tar.gz file to the current directory
+     ./configure                         run the configure script that comes with the source code. This creates a makefile
+     make                                run the build specified in the makefile
+
+     sudo make install                   run the install script from the makefile. This installs the program
+
+     Package manager                     allows you to install programs on a linux
+ Package Managers
+     apt-get update              update your package catalog on your computer
+     apt-cache search PATTERN    search the available packages for a pattern
+     apt-get install PACKAGE     install one or more packages
+     apt-get upgrade             upgrade to the latest version of all the packages installed
+     apt-get remove PACKAGE      remove or uninstall package from your computer

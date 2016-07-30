@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel= "stylesheet" type="text/css" href= "main.css">
+	<title>Getting my learning on!</title>
+</head>
+<div>
+<h1>HTML</h1>
+	<h2>Getting started with HTML</h2>
+		<div class="concept">
+
+		<h3>HTML <em> Hypertext Markup Language </em></h3>
+				<ul><li>The main type of document used on the web; and glues everything together.
+				<li>Made up of context (what you see), markup (what it looks like), reference to their documents (images and videos), and links to other pages.
+				<li>HTML markup uses; open tags, followed by context, then followed by closing tags. This is referred to as an element.</ul>
+	
+		<h3>HTML Attributes</h3>
+			This is where you can add a link or image to a specific text content. Here is an example of each:
+				<ul><li>I have decided to take a nanodegree course with <a href="http://www.udacity.com">Udacity</a> to help learn coding and get my career going. 
+				<li>I have also learned how to place <img src="http://resource.mmgn.com/pwnage/user_11358_Z2RXW2KR?.jpg" alt="image"> in my coding. It should also be noted that the alt="image" in the code for the image is a void text. This is used when the link is not working and the image can not be displayed.</ul>
+			<!--Please note that the image is not working. I am wanting to show what the image would look like if the the void text is needed to be displayed. To see the image just take the "?" off before jpg.-->
+
+		<h3>In-line and Block Elements</h3>
+			The difference between <em>In-line</em> and <em>Block</em> elements is simply comparing them to the <em>Break</em> and <em> Paragraph</em> elements.When looking at the break element you will notice that the text lines are right next to each other. While with block elements you will notice that a invisible box around the first line of text creating what looks like a paragraph element. When looking at a page it is easy to see where a block element is because it will run from side to side where a in-line element will not.<br><br>
+
+			<div class="wrapper">
+				<div class="box1">
+					<em>In-line elements:</em><ul>
+						<li>Break
+						<li>Span
+						<li>Font changes</ul>
+				</div>
+				<div class="box1">
+					<em>Block elements:</em>
+					<ul>
+						<li>Paragraph
+						<li>DIV
+						<li>Headers</ul>
+				</div>
+			</div>
+		</div>
+	<h2>Creating Document</h2>
+		<div class="concept">
+
+		<h3>Creating a Structured Document</h3>
+			When creating a structured document in HTML it is best to use the div element instead of the paragraph element. This will make it not only easier for others to read your code, but for you as well. When creating a structured document there are 3 types: 
+				<ul><li><b>HTML</b>This creates the structure of the document, such as a body of text. It is also the language of the web
+				<li><b>CSS</b><em> (Cascading Style Sheets)</em>-This creates style within the document, such as special accent to a specific area of the document. CSS allows change within the document.
+				<li><b>JavaScript</b>-This is for accessories and making things more appealing.</ul> 
+
+		<h3>HTML and DOM <em>(Tree Structure)</em></h3>
+			<b><em>Tree Structures</em></b> are areas of coding that can be expanded and retracted to show more or less of what code is being used. When the tree structurer is fully expanded you can see everything down to the body of the text. When the Tree structure is fully retracted the only thing that shows is the document type, header, and body.<br><br>
+
+			<b>DOM <em>Document Object Model</em></b> DOM is often refereed to as "tree like" due to its parent/child or ancetors/descendants relationship. These elements are held together by the parent/child relationship rules and create more structure that can contain other elements, such as sibling elements. When visiting a web page you can use the developer tools on the menu to read the code they have written.This also allows you to inspect elements within their page as well as make any adjustments for easier viewing. You can also use this as a tool to help you learn how to use a code that they have written.
+
+				<div class="wrapper">
+					<div class="box1">
+						<img src="http://s17.postimg.org/a6w5g1qxb/dom_tree.gif" alt="image">
+					</div>
+				</div>
+	<h2>CSS</h2>
+		<div class="concept">
+
+		<h3>Boxifying Design</h3>
+			Boxifying is drawing boxes around the images, logos, text, and anything that is on a page. This allows you to understand the arrangement of each item. If you think of the backdrop as a grid and the items as squares it becomes easier to move the items around in order to be more appealing to the viewer. Div tags create boxes, and can create boxes within boxes. This will help create the title, images, and text boxes from overlapping and can place them next to each other or on top of one another. This can be done with class attributes in CSS. 
+
+		<h3>Creating style within HTML using CSS</h3>
+			Creating style within HTML, you would use CSS. In order to do this you will need to link the CSS to the HTML. Doing so would look like this:<br><br>
+				
+				<div class="wrapper">
+					<div class="box1">
+						&lt;!DOCTYPE html&gt;<br>
+						&lt;html&gt;<br>
+						&lt;head&gt;<br>
+						&emsp;&lt;link rel="stylesheet" type="text/css" href"name of css file used"&gt;
+						&lt;/head&gt;<br>
+						&lt;body&gt;<br>
+						&emsp;&lt;div class= "lesson"&gt; Body of Page&lt;/div&gt;
+						&lt;/body&gt;<br>
+						&lt;/html&gt;
+					</div>
+				</div>	
+
+		<h3>CSS <em>(Cascading Style Sheet)</em></h3>
+			CSS is a great tool to use in order to keep from repetitions. It is important when writing code to not have repetition because it can cause confusion, mistakes, and the inability for others to read your code easily. CSS a specific set of rules that the code follows. When determining the rule to use for a specific element CSS will continue going down all the rules until it finds the most specific rule to follow. <br><br>
+
+			Writing in CSS would look more like: .description {color: red;}. Then while writing in HTML you would need to refer back to the specific rule in oder to keep repetitions to a minimum. Referring back to that rule in HTML would look like: &lt;/div class="lesson"&gt;. <br><br>
+
+			A little vocabulary:<br>
+			Written CSS: h1 {background-color: black; color: white}
+				<ul><li><b>Selector</b>- the name you use in order to target the elements that are assigned to a class or ID attribute in HTML. In the example above h1 would be the selector.
+				<li><b>Declaration</b>-the item that you are calling out to change. In the example about the declaration would be background-color.
+				<li><b>Property</b>-the property you want to change. In the example above the property would be -color.
+				<li><b>Value</b>-the value you want to assign to the attribute. The value above is, black.
+				<li><b>Rule</b>-a line of code that describing the value that a certain attribute will take. Above the rule is everything between { }.</ul>
+
+		<h3>Flex Box</h3>
+			A flexible box that lays out a line and distributes space among a container. Using a flex box allows for items to be next to each other that would normally take space like a block element, such as an image.
+		</div>
+<h1>Python</h1>
+	<h2>Python Vocabulary</h2>
+		<div class="concept">
+
+		<h3>Introduction to serious programing</h3>	
+			Programming can be a little hard to understand at first. So lets start off with a little vocabulary first.
+				<ul><li><b>Web Crawler</b>-collects data from the web. It is like a seed that moves from page to page following links to other pages in order to provide information that you will use for your search engine. A web page is a chunk of text from the Internet to your web browser.
+				<li><b>Computer</b>- a universal machine that can do anything with a program, a computer without a program can not do anything. A computer can interpret billions of instructions in 1 second. Thus making it the fastest way to get information.
+				<li><b>Program</b>- tells the computer what steps to take.
+				<li><b>Precise sequence of steps</b>- the code that you give the computer to follow.
+				<li><b>Computation</b>- anything that we can imagine, anything that we can figure out how to write a program for, we can make a computer do.
+				<li><b>High-level language</b>- running our program in python instead of directly on the computer.
+				<li><b>Input</b>-code written for python to place on the computer.
+				<li><b>Interpreter</b>- runs our programs and interprets them, and executes the program. We write in Python language by running a program in a language into the computer so it can understand it directly. Here is a link to a on-line interpreter. <a href= "http://mathcs.holycross.edu/~kwalsh/python/">Python Interpreter</a>
+				<li><b>Print</b>- the output that the program will have. Python can do simple math, where you can also use ().
+				<li><b>Ambiguity</b>-The computer interprets the program the correct way, and is not read incorrectly. 
+				<li><b>Verbosity</b>- reads exactly the way it is written, needs to have less detail and a small amount of rules.
+				<li><b>Debugging</b>-Python requires code be written with a very specific syntax. This means that small typos can lead to big problems. White space does not matter after "print".</ul>
+		</div>
+	<h2>Variables</h2>
+		<div class="concept">
+
+		Programmers use variables to represent values in their code. This makes code easier to read by telling others what values mean. It also makes code easier to write by cutting down on potentially complicated numbers that repeat in our code. We sometimes call numbers without a variable "magic numbers". It's best to reduce the amount of "magic numbers" in our code. Here is an example of a variable: How many cups of water are in a 10 gallon trash can?<br>
+
+			https://www.facebook.com/Safehavencolorado/
+			
+		A variable is a name that helps keep track of values, and uses a name assigned to the variable. Assignment statement: name = expression, which turns into: cup_in_a_gallon=16. The value of the name is the value that it refers to.<br><br>
+
+		When assigning a value to a variable, it is important to know that they can vary. Once variable is defined,  you can go back and change the value. When this is done it will change the result of the printed statement. This is a great idea if something is defined incorrectly you do not need to redo everything, just simply re-define the variable that was incorrect. In the above example gallons_in_trash_can is the variable where =10 is the value. If we change the value to 20 it will look like:<br>
+
+			<div class="wrapper">
+				<div class="box1">
+					cup_in_a_gallon=16<br>
+					gallons_in_trash_can=20<br>
+					cups_in_20_gallon=cup_in_a_gallon*gallons_in_trash_can<br><br>
+					print cups_in_20_gallon<br><br>
+					result= 320<br><br>
+				</div>
+			</div>
+
+		When writing in Python it is important to know that the symbol = does not mean the same thing that it does in math. When looking at a mathematical equation you will see that 2+2=4 but when you are writing in Python my_variable=4 will only show the outcome of 4. When writing a equation in math you will see the formula on the left and solution on the right. While writing in python you will want to focus on the solution side first, in order to create the equation in the print line.
+		</div>
+	<h2>Strings</h2>
+		<div class="conecpt">
+
+		Strings are sequences of characters that are enclosed in quotes. We can enclose them with single or double quotes and assign them to variables. When using single or double quotes you can use both but be consistent when using them. We can even combine strings by adding them (we call this concatenation). <br><br>
+
+		<h3>Concatenation</h3> Placing 2 or more strings together using the + symbol. It will not have a space between the 2 strings. Adding numbers into strings is not possible and you will get an error, however when you do '!' * 3 = !!! Here are several examples that show the difference.<br><br>
+
+			<div class="wrapper">
+				<div class="box1">
+					<em><b>Example with substrings:</em></b><br>
+					<b>Example 1:</b> 'string' + 'string' = stringstring<br>
+					<b>Example 2:</b> 'string ' + 'string' = string string<br>
+					<b>Example 3:</b> 'string ' + 'string' + '!' * 3 = string string!!!<br><br>
+					<em>**Please notice the space between the first g and the ' <br>
+					on examples 2 and 3, where on example 1 there is no space.**</em><br><br>
+				</div>
+				<div class="box1">
+					<em><b>Example with substrings and replacing words:</em></b><br>
+					sentence= 'A NOUN went on a walk. It can VERB really fast.'
+					substring1= sentence [:2] (before NOUN)<br>
+					substring2= sentence [6:-17] (after NOUN, before VERB)<br>
+					substring3= sentence [-13:] (after VERB)<br>
+					noun_replacment = cat<br>
+					verb_replacment = run<br>
+					new_sentence= substring1 + noun_replacement + substring2 + verb_replacment + substring3<br>
+					print new_sentence<br>
+					Result: A cat went on a walk. It can run really fast.<br><br>
+				</div>
+			</div>
+
+		<h3>Indexing strings</h3> Are &lt;string&gt; [&lt;expression&gt;]. When you are indexing strings and counting them you will want to start the first letter out with 0 and work your way up. The spaces between words and ends of sentences will need to be counted as well.<br><br>
+
+		<h3>Selecting a sub-sequences</h3> Selecting a sub-sequence of a string starting from the first expression, then stopping at the last expression. This would look like:&lt;string&gt; [&lt;expression&gt;:&lt;expression&gt;]. Please note that you do not have to have a number at the end of the :, but if you do not it will pull the rest of the string. You can also do [:] and this will pull the whole string. <br><br>
+
+			<div class="wrapper">
+				<div class="box1">
+					<em><b>Indexing Strings</em></b><br>
+					name = "Tim"<br>
+					print name [2]<br>
+					Result= m<br><br>
+				</div>
+				<div class="box1">
+					<em><b>Selecting Sub-sequences</em></b><br>
+					name = "Mittsy"<br>
+					print name [2:4]<br>
+					Result= tt<br><br>
+				</div>
+			</div>
+
+		<h3>Finding Strings in Strings</h3> Is a method that is a built in procedure provided by Python:  &lt;string&gt;.find( &lt;"string"&gt;). The output of .find is the position where the sub-string is found. It will give the first position in the search string where the target string appears. If the target string does not appear then it will result in -1.<br><br>
+
+		<h3>Finding Strings with a Parameter</h3> Parameters are what goes inside the parentheses. The final output is the number of the position in the search string, where the target string appears. The first occurrence after the number &lt;string&gt;.find("string" + "number").
+
+			<div class="wrapper">
+				<div class="box1">
+					<em><b>Examples of .find</b></em><br>
+					"test".find("te")<br>
+					"text".find("T")<br>
+					"text".find("")<br>
+					"test"[2:]<br><br>
+				</div>
+				<div class="box1">
+					<em><b>Results</b></em><br>
+					0<br>
+					-1<br>
+					0<br>
+					st<br><br>
+				</div>
+				<div class="box1">
+					<em><b>.find with Parameter</b></em><br>
+					"test".find("t")<br>
+					"test".find("t", 1)<br>
+					"test".find("s")<br>
+					"test".find("s", 3)<br><br>
+				</div>
+				<div class="box1">
+					<em><b>Results</b></em><br>
+					0<br>
+					3<br>
+					2<br>
+					-1<br><br>
+				</div>
+			</div>
+
+		<h3>.replace method</h3> This method is very similar to the .find method with  fewer steps, and used to find a word or phrase then replace it with another. sting.replace('old', 'new')
+			<div class="wrapper">
+				<div class="box1">
+					<em><b>Example</b></em><br>
+					text= "this is a string example....wow!"<br>
+					print text.replace('is', 'was')<br>
+					result: "this was a string example....wow!"<br><br>
+				</div>
+				<div class="box1">
+					<em><b>Example</b></em><br>
+					text= "this is a string example....wow!"<br>
+					print text.replace('is', 'was', 3)<br>
+					result: "thwas was a string example....wow!"<br><br>
+				</div>
+				<div class="box1">
+					<em><b>Example Changing several words</b></em><br>
+					sentence= "A NOUN..., a VERB..."<br>
+					sentence= sentence.replace("NOUN", "duck")<br>
+					sentence= sentence.replace("VERB", "waddle")<br><br>
+				</div>
+			</div>
+		</div>
+	<h2>Functions</h2>
+		<div class="conecpt">				
+
+		<h3>Functions</h3> <em>aka procedures or methods</em> take input and return an output. Functions are bits of code that you can call repetitively, and use over and over. Functions can be defined once and used as many times as needed. There can be any number of inputs, but it has to have the number of inputs the function expects. When we do not have enough inputs in the parameters then it will give an error message. When using a function it will look like:
+
+		<div class="wrapper">
+			<div class="box1">
+				def name_of_function():<br>
+				&emsp;return ()<br>
+				print name_of_function<br>
+				result: name_of_function<br><br>
+			</div>
+		</div>
+
+		<h3>Inputs and Outputs</h3>With functions we will use inputs and outputs. <b>Inputs</b> are what you put into a function to tell them what to do and how it is done. <b>Output</b> is the return and the result of the function. 
+
+		<div class="wrapper">
+			<div class="box1">
+				def say_hello(name):<br> 
+				&emsp; greeting= "Hello"+name+"!"<br>
+				&emsp; return greeting <br>
+				print say_hello("Tim") <br>
+				print say_hello("Mittsy") <br>
+				result: <br>
+				&emsp;Hello Tim! <br>
+				&emsp;Hello Mittsy!
+			</div>
+			<div class="box1">
+				<em>def=>making &emsp;&emsp;name=>input/making</em><br>
+				<em>return=>output</em><br>
+				<em>"Tim"=>using &emsp;&emsp;print=>output</em><br>
+				<em>say_hello=>using &emsp;&emsp; name=>input</em><br>
+				<em>result=> output</em><br>
+				<em>Hello Tim=>using</em><br>
+			</div>
+		</div>	
+
+		<h3>Scopes</h3> With functions it is important to know the difference between local and global scope. A <b>Local Scope</b> refers to a variable that you can make inside the function and will be used, but does not exist outside of the function. A <b>Global Scope</b> is when a variable will be available at all times. It is best to avoid using global variable because it is easier to make mistakes with these. 
+
+		<div class="wrapper">
+			<div class="box1">
+				a=6<br>
+				def some_function():<br>
+				&emsp; a=5<br>
+				print 'Local: '+str(a)<br>
+				some_function()<br>
+				print 'Global: 'str(a)<br>
+				result:<br>
+				&emsp; Local: 5<br>
+				&emsp; Global: 6<br><br>
+			</div>
+		</div>	
+	<h2>If and Else Statements</h2>
+		<div class="conecpt">
+
+		 <h3>Boolean Values</h3> Which is the result of if, else, and while statements resulting in a True or False answer. If and else statements are commonly used with comparisons between values. 
+
+		<div class="wrapper">
+			<div class="box1">
+				<b><em>Boolean Examples:</b></em><br>
+				print 2 < 3<br>
+				print 21 < 3<br>
+				print 7 * 3 < 21<br>
+				print 7 * 3 != 21<br>
+				print 7 * 3 == 21<br>
+			</div>
+			<div class="box1">
+				<b><em>Results:</b></em><br>
+				True<br>
+				False<br>
+				False<br>
+				False<br>
+				True<br>
+			</div>
+		</div>
+
+		<h3>If and Else statements</h3> Are used when controlling when a function is used and how it is used. They are controlled by the Boolean results. If Boolean results in True then the function will continue like normal. If Boolean results in False then it will stop and move to the else statements. Here are a few example of each to see how they are used. 
+
+		<div class="wrapper">
+			<div class="box1">
+				<b><em>Return Bigger</b></em><br>
+				def bigger (a,b):<br>
+				&emsp; if a > b:<br>
+				&emsp; &emsp; return a<br>
+				&emsp; return b<br>
+			</div>
+			<div class="box1">
+				<em><b>Biggest with 3+ numbers</em></b><br>
+				def bigger (a,b,c):<br>
+				&emsp; if a > b:<br>
+				&emsp; &emsp; if a > c:<br>
+				&emsp; &emsp; &emsp; return a<br>
+				&emsp; &emsp; else:<br>
+				&emsp; &emsp; &emsp; return c<br>
+				&emsp; else:<br>
+				&emsp; &emsp; if b > c:<br>
+				&emsp; &emsp; &emsp; return b<br>
+				&emsp; &emsp; else:<br>
+				&emsp; &emsp; &emsp; return c<br>
+			</div>
+			<div class="box1">
+				<b><em> Biggest with max</b></em><br>
+				def biggest (a,b,c):<br>
+				&emsp; return max<br>
+				print max (a,b,c)
+			</div>
+			<div class="box1">
+				<b><em>True or False</b></em><br>
+				def is_friend(name):<br>
+				&emsp; if name [0] =='D':<br>
+				&emsp; &emsp; return True<br>
+				&emsp; else:<br>
+				&emsp; &emsp; if name [0] == 'N':<br>
+				&emsp; &emsp; &emsp; return True<br>
+				&emsp; &emsp; else:<br>
+				&emsp; &emsp; &emsp; return False<br>
+			</div>
+		</div>
+
+		<h3>Or Statements</h3> Are used when comparing two or more similar items.
+
+		<div class="wrapper">
+			<div class="box1">
+				def is_friend(name):<br>
+				&emsp; return name [0] =='D' or name [0] == 'N'<br>
+				print is_friend('Doug')<br>
+				print is_friend('Nichole')<br>
+				print is_friend('Fred')<br>
+				&emsp;<em>Result: True, True, False</em>
+			</div>
+			<div class="box1">
+				def string ():<br>
+				&emsp; return<br>
+				print True or False<br>
+				print False or True<br>
+				print True or True<br>
+				print False or False<br>
+				&emsp; <em>Result: True, True, True, False</em>
+			</div>
+		</div>
+	<h2>While Statements</h2>
+		<div class="conecpt">
+
+		<b>While Statements</b> are used when you are wanting to create a loop for a function, this loop will be used until it returns a false statement. After the false statement it will then move to the next line of code. Loops are a very important concept of computer programming, that allow us to run blocks of code as many times as we wish without having repetition.
+
+		<div class="wrapper">
+			<div class='box1'>
+				def count():<br>
+				&emsp;i = 0<br>
+				&emsp;while i < 10:<br>
+				&emsp; &emsp; print i<br>
+				&emsp; &emsp; i = i + 1<br>
+				count ()<br>
+				&emsp;<em>Result: 0 1 2 3 4 5 6 7 8 9</em>
+			</div>
+			<div class='box1'>
+				def count():<br>
+				&emsp;i = 1<br>
+				&emsp;while i != 10:<br>
+				&emsp; &emsp; i = i + 2<br>
+				&emsp; &emsp; print i<br>
+				count ()<br>
+				&emsp;<em>Result: 1 2 3 (will continue forever)</em>
+			</div>
+		</div>
+		<div class='wrapper'>
+			<div class='box1'>
+				def print_numers(n):<br>
+				&emsp;i = 1<br>
+				&emsp;while i <= n:<br>
+				&emsp; &emsp; print i<br>
+				&emsp; &emsp; i = i + 1<br>
+				print print_numbers(3)<br>
+				&emsp;<em>Result: 1 2 3</em>
+			</div>				
+			<div class='box1'>
+				def remove_spaces(text):<br>
+				&emsp;text_without_spaces = '': <em>(empty string for now)</em><br>
+				&emsp;while text != '':<br>
+				&emsp;&emsp;next_character = text[0]<br>
+				&emsp;&emsp;if next_character != ' ': <em>(single space)</em><br>
+				&emsp;&emsp;&emsp;text_without_spaces = text_without_spaces + next_character<br>
+				&emsp;&emsp;text = text [1:]<br>
+				&emsp;return text_without_spaces<br>
+				print remove_spaces("hello my name is Mittsy, how are you?")<br>
+				&emsp;<em>hellomynameisMittsy,howareou?</em>			
+			</div>	
+		</div>			
+	<h2>Debugging</h2>
+		<div class="conecpt">
+
+		 Bugs are going to happen and we must develop a strategy for systematically getting rid of them. its not about spotting typos or logical errors as it is about building a correct mental model of how the system works. You can tell if a bug is happening due to the system crashing and showing an error message. These can be hard to read, but if you look for the number it is saying is wrong it will tell you the area of the code that is incorrect. The last line of the error message will tell you what the issue is and to find out just what that is saying you can type the error message into a search engine and find out how to fix it. 
+		 
+		 <div class="wrapper">
+		 	<div class="box1">
+		 		<h3>There are several steps to follow when trying to debug. </h3><ul>
+		 			<li>Check to see if there are any comments in to code to see what the function is supposed to do. This will help others and yourself to see what is supposed to be happening. This will also greatly help with debugging if needed. 
+		 			<li>Read through your error message, it will tell you what line has the bug in it
+		 			<li>Try small simple fixes
+		 			<li>Comment the code out and copy and paste into a new line and run it to test and modify it until it does what you want it to do.  Then try to find the bug to see where it went wrong and try to fix the original code. This will help you to further  understand the error message as well as any further bugs that might happen. Commenting out should be done with shorter functions. With longer functions it is best to turn it into a big string by using """, or '''
+		 			<li>If you are trying to make your own code to look like something then first try to find a code on-line that is similar. If you can not then try to separate the functions in order to see what is causing the error and then adjust your code accordingly. 
+		 			<li>Separate your code into separate lines and try to print each one, this will show you what is and what is and is not working. 
+		 			<li>Make sure that your examples work and read out the same in other interpreters, not all programs will run the same way. Just because it works in one does not mean that  it will work in another. 
+		 			<li>When code does not flag an error message but does not read the way that it is supposed to add print lines in the function to see what needs to be adjusted.</ul>
+		 	</div>
+		 	<div class="box1">
+		 		<h3> Tips for making comments in your code so others can read it. </h3><ul>
+		 			<li>Don't comment on "obvious code". This will not be used and will take up valuable time. Example: # print "Hello"  # prints hello 
+		 			<li>Start functions with comments with the inputs, outputs and explaining what the function does. Example: <br>
+					&emsp; def isLeapYear(year):
+					# takes a number as input and outputs True if the number represents a leap
+				 	# year and False otherwise. <br>
+				 	Example:
+					&emsp;	# def isLeapYear(year):
+					''' takes a number as input and outputs True if the number represents a leap year and False otherwise'''
+				 	<li>Keeping your comments up to date, make sure that when you update anything in a function that you are constant and update the comment line as well. This will be helpful if you need to go back and update again, or if a function is no longer working.
+				 	<li>Be concise, comments should be short and explain only the most important details of your code. If you find yourself having to write very long comments to clarify confusing parts of your code, you may want to rethink your approach to the problem. Generally, well written code will have sparse comments. Poorly written code may depend on them!</ul>
+			</div>
+		</div>
+	<h2>Structured Data: List</h2>
+		<div class="concept">
+
+		List are similar to how strings are sequences of characters, lists are sequences of anything! We can have lists of numbers, lists of characters, even lists of lists! And we can mix up the contents too so we can have lists containing many different things. One of the advantages of having data with structure (like in a list) is that you can take advantage of that structure! One way you can do that is by directly looping through the elements of a list with what's called a for loop. <br><br>
+
+		There are a few differences between list and strings. They are 
+		 <ul><li>Strings can only hold characters, while list can hold anything. 
+		 <li>List support mutation, strings do not. </ul><br>
+
+		<div class="wrapper">
+			<div class='box1'>
+				<b><em> Basic Example:</em></b><br>
+				p = ['y', 'a', 'b', 'b', 'a', '!']<br>
+				print p<br>
+				print p[0]<br>
+				print p[2:4]<br>
+				<em>result:	<br>
+				&emsp;['y', 'a', 'b', 'b', 'a', '!']<br>
+				&emsp;['y']<br>
+				&emsp;['b', 'b',]</em>
+			</div>
+			<div class='box1'>
+				<b><em> Strings and Numbers Example:</em></b><br>
+				mixed_list = ['Hello!', 42, "Goodbye!"]<br>
+				print mixed_list<br>
+				<em>result:<br>
+				&emsp;['Hello!', 42, "Goodbye!"]</em>
+			</div>
+			<div class='box1'>
+				<b><em> List within List Example:</em></b><br>
+				list_with_lists = [3, 'colors:', ['red', 'green', 'blue'], 'your favorite?']<br>
+				print list_with_lists<br>
+				<em>result:<br> 
+				&emsp;[3, 'colors:', ['red', 'green', 'blue'], 'your favorite?']<br>
+			</div>	
+		</div>
+		<div class="wrapper">
+			<div class='box1'>
+				<b><em> Days in Month Example:</em></b><br>	
+				days_in_month = [31,28,31,30,31,30,31,31,30,31,30,31]<br>
+				def how_many_days(month):<br>
+				&emsp;return days_in_month[month-1]<br>
+				print how_many_days(12)<br>
+				<em>result: 31</em>
+			</div>	
+			<div class='box1'>
+				<b><em>Nested List Example:</em></b><br>
+				beatles=[['John', 1940], ['Paul', 1942], ['George', 1943], ['Ringo', 1940]]<br>
+				print beatles [3]<br>
+				print beatles [3][0]<br>
+				print beatles [3][1]<br>
+				</em>result:<br>
+				&emsp;['Ringo', 1940]<br>
+				&emsp;Ringo<br>
+				&emsp;1940</em>
+			</div>				
+			<div class='box1'>
+				<b><em>Nested List with Division:</em></b><br>	
+				countries = [['China', 'Beijing', 1350],['Romania', 'Bucharest', 21]]<br>
+				print countries[0][2]/countries[1][2]<br>
+				<em>result: 64</em>
+			</div>	
+		</div>			
+
+		<h3>Mutation</h3>
+			Modify the existing object, so we can change the value of a list after we have created it. Once a list had been modified then we then we have to worry about other variables that might refer to the same object. This can only be done in lists. 
+
+			<div class="wrapper">
+				<div class='box1'>
+					<b><em>Basic String:</em></b><br>
+					s='Hello'<br>
+					s='Yello'<br>
+					s= s + w<br>
+					print s<br>
+					<em>result: Yellow</em>
+				</div>
+				<div class='box1'>
+					<b><em>Basic List:</em></b><br>
+					p=['H','e','l','l','o']<br>
+					print p<br>
+					p[0]='Y'<br>
+					print p<br>
+					p[4]= '!'<br>
+					print p<br>
+					<em>result:<br>
+					&emsp;['H','e','l','l','o']<br>
+					&emsp;['Y','e','l','l','o']<br>
+					&emsp;['Y','e','l','l','!']</em>
+				</div>
+			</div>		
+
+		<h3>Aliasing</h3>
+			When we have 2 different ways to refer to the same object. When one of them does not work neither of them will work. Any change that we make to one of the objects, will change it in the other.
+
+			<div class="wrapper">
+				<div class='box1'>
+					<b><em>Example:</em></b><br>
+					p=['J','a','m','e','s']<br>
+					q=p <em>THIS IS MUTATION!</em><br>
+					p[2]='n'<br>
+					print p<br>
+					p= [0,0,7] <em>THIS IS ALIASING!</em><br>
+					print p <br>
+					<em>results:<br>
+					&emsp;['J','a','n','e','s']<br>
+					&emsp;[0,0,7] P CHANGES TO 007, WHILE Q STAYS WITH JANES!</em>
+				</div>
+				<div class='box1'>
+					<b><em>def Example:</em></b><br>
+					spy=[0,0,7]<br>
+					def replace_spy(p):<br>
+					&emsp;p[2] = p[2] + 1<br>
+					replace_spy(spy)<br>
+					print spy<br>
+					<em>result: [0,0,8]</em>
+				</div>	
+			</div>
+
+		<h3>List Operations:</h3>
+			<h4>.append</h4>This will allow us to add a new element at the end of a list. This will mutate the old list, not not create a new list. 
+
+			<div class="wrapper">
+				<div class='box1'>
+					<b><em>Example:</em></b><br>
+					stooges=['Moe','Larry','Curly']<br>
+					stooges.append('Shemp')<br>
+					print stooges<br>
+					<em>result: 
+					&emsp; ['Moe','Larry','Curly','Shemp']</em>
+				</div>
+			</div>
+
+			<h4>Plus</h4>This is very similar to strings. Creates new list instead of editing a previous one. There is a small difference between .append and +, .append can place a list inside of a list, while + adds list together.
+
+			<div class="wrapper">
+				<div class='box1'>
+					<b><em>Example:</em></b><br>
+					[0,1] + [2,3]<br>
+					<em>result:<br>
+					&emsp;[0,1,2,3]</em>
+				</div>
+			</div>
+
+			<h4>Len</h4>Is an object we want to know the length of. Works for many things other than list. It will work for any object that is a collection of things. The output of len is the number of elements in the input.
+
+			<div class="wrapper">
+				<div class='box1'>
+					<b><em> Example:</em></b><br>	
+					len ([0,1])<br>
+					<em>result: 2</em>
+				</div>	
+				<div class='box1'>
+					<b><em>Example:</em></b><br>
+					len ('Udacity')<br>
+					</em>result: 7</em>
+				</div>				
+				<div class='box1'>
+					<b><em>Example:</em></b><br>	
+					p=[1,2]<br>
+					p.append(3)<br>
+					p=p+[4,5]<br>
+					len p<br>
+					<em>result: 5</em>
+				</div>	
+			</div>	
+
+			<h4>+=</h4>"add and" symbol add the right operand to the left operand and assign the result to left operand.
+
+			<div class='wrapper'>
+				<div class='box1'>
+					<em><b>Example:</em></b><br>
+					list = [1,2,3,4,5]<br>
+					list += [6,7]<br>
+					def proc(mylist):<br>
+					&emsp;mylist +=myList<br>
+					print list<br>
+					proc(list)<br>
+					print list<br>
+					<em>result:<br>
+					&emsp;[1,2,3,4,5,6,7]<br>
+					&emsp;[1,2,3,4,5,6,7,1,2,3,4,5,6,7]</em>
+				</div>
+			</div>
+	<h2>Structured Data: Loops</h2>
+		<div class='concept'>
+
+			For loops, like while loops, are useful for running a block of code multiple times. For loops make iterating through elements in a list easier than using a while loop.
+
+			<div class="wrapper">
+				<div class='box1'>
+					<b><em> Basic Example:</em></b><br>	
+					def print_all_elements(p):<br>
+		    		&emsp;for e in p:<br>
+		        	&emsp;&emsp;print e<br>
+					myList = [1, 2, [3, 4]]<br>
+					print_all_elements(myList)<br>
+					<em>result:<br>
+					&emsp;1<br>
+					&emsp;2<br>
+					&emsp;[3,4]</em>
+				</div>
+				<div class='box1'>
+					<b><em> Basic Example:</em></b><br>
+					example_list_1 = ['a', 'b', 'c', 'd']<br>
+					for thing in example_list_1:<br>
+					&emsp;print thing <br>
+					<em>result: <br>
+					['a','b','c',d]</em>
+				</div>
+				<div class='box1'>
+					<b><em>Example with list:</em></b><br>	
+					example_list_2 = [['China', 'Beijing'], ['USA'  , 'Washington D.C.'], ['India', 'Delhi']]<br>
+					for country_with_capital in example_list_2:<br>
+			    	&emsp;country = country_with_capital[0]<br>
+			    	&emsp;capital = country_with_capital[1]<br>
+			    	&emsp;print capital + ' is the capital of ' + country<br>
+					<em>result:<br>
+					&emsp;Beijing is the capital of China<br>
+					&emsp;Washington D.C. is the capital of USA<br>
+					&emsp;Delhi is the capital of India</em>
+				</div>
+			</div>
+			<div class='wrapper'>
+				<div class='box1'>
+					<b><em>Example with sum:</em></b><br>
+					def sum_list(p):<br>
+					&emsp;result = 0<br>
+					&emsp;for e in p:<br>
+					&emsp;&emsp;result = result + e<br>
+					&emsp;return result<br>
+					print sum_list([1,7,4])	<br>
+					print sum_list([9,4,10])<br>
+					<em>result: 12, 23</em>
+				</div>
+				<div class='box1'>
+					<b><em>Example for counting:</em></b><br>
+					def measure_udacity(p):<br>
+					&emsp;count = 0<br>
+					&emsp;for e in p:<br>
+					&emsp;&emsp;if e[0] == 'U':<br>
+					&emsp;&emsp;&emsp;count = count + 1<br>
+					&emsp;return count<br>
+					print measure_udacity(['Dave','U2'])<br>
+					<em>result: 1</em>
+				</div>
+				<div class='box1'>
+					<b><em>Example, while and for:</em></b><br>
+					def find_element(p,t):<br>
+					&emsp;i = 0<br>
+					&emsp;for e in p:<br>
+					&emsp;&emsp;if e == t:<br>
+					&emsp;&emsp;&emsp;return i<br>
+					&emsp;&emsp;i = i + 1<br>
+					&emsp;return -1<br>
+					print find_element([1,2,3]3)<br>
+					print find_element(['alpha','beta'],'gamma')<br>
+					<em>result: 2; -1</em>
+				</div>
+			</div>
+
+		<h3>Index list</h3>
+			Index list are invoked on a list where you pass in the value and the output of index is the position where that value exist in the list. If the result is not listed then instead of giving -1 as a result it will throw an error. It will always give us just the first one listed.
+
+			<div class='wrapper'>
+				<div class='box1'>
+					<b><em>Basic Example:</em></b><br>
+					p = [0,1,2]<br>
+					print p.index(2)<br>
+					p = [0,1,2,2,2]<br>
+					print p.index(2)<br>
+					p = [0,1,2]<br>
+					print p.index(3)<br>
+					<em>result:<br>
+					&emsp;2<br>
+					&emsp;2 (only sees the first 2, not the others)<br>
+					&emsp;3 is not in list</em>
+				</div>
+			</div>
+
+		<h3>in, not in</h3>
+			if &lt;value&gt; is in the &lt;list&gt; output is True, otherwise it is false.
+			
+			<div class='wrapper'>
+				<div class='box1'>
+					<b><em>Basic Example:</em></b><br>
+					p = [0,1,2]<br>
+					print 3 in p<br>
+					print 2 in p<br>
+					<em>result:<br>
+					&emsp;false<br>
+					&emsp;true</em>
+				</div>
+				<div class='box1'>
+					<b><em>Example with in:</em></b><br>
+					def find_element(p,t):<br>
+					&emsp;if t in p:<br>
+					&emsp;&emsp;return p.index (t)<br>
+					&emsp;else: <br>
+					&emsp;&emsp;return -1<br>
+					print find_element([1,2,3],3)<br>
+					print find_element(['alpha','beta'],'gamma')<br>
+					<em>result:<br>
+					&emsp;2<br>
+					&emsp;-1</em>
+				</div>
+				<div class='box1'>
+					def find_element(p,t):<br>
+					&emsp;if t not in p:<br>
+					&emsp;&emsp;return -1<br>
+					&emsp;else:<br> 
+					&emsp;&emsp;return p.index (t)<br>
+					print find_element([1,2,3],3)<br>	
+					print find_element(['alpha','beta'],'gamma')<br>
+					<em>result:<br>
+					&emsp;2<br>
+					&emsp;-1</em>
+				</div>
+			</div>	
+	<h2>How to Solve Problems</h2>
+		<div class='concept'>
+
+		<h3>Steps for solving large problems!</h3>
+		<ul><li>Step 1: Make sure that you understand the question</li>
+			<li>Step 2: What are the inputs and how will they be represented?</li>
+			<li>Step 3: What are the outputs and how will they be represented?</li>
+			<li>Step 4: Psuesudocode 
+				<div class='wrapper'>	
+					<div class='box1'>
+						<em><u>This determines if it is a leap year or not</u></em><br>
+						def isLeapYear(year):<br>
+						&emsp;if year % 400 == 0:<br>
+						&emsp;&emsp;return True<br>
+						&emsp;if year % 100 == 0:<br>
+						&emsp;&emsp;return False<br>
+						&emsp;if year % 4 == 0:<br>
+						&emsp;&emsp;return True<br>
+						&emsp;return False	<br><br>
+
+						<em><u>This determines how many days are in each month</u></em><br>
+						def daysInMonth(year, month):<br>
+						&emsp;if month in (1, 3, 5, 7, 8, 10, 12):<br>
+						&emsp;&emsp;return 31<br>
+						&emsp;else:<br>
+						&emsp;&emsp;if month == 2:<br>
+						&emsp;&emsp;&emsp;if isLeapYear(year):<br>
+						&emsp;&emsp;&emsp;&emsp;return 29<br>
+						&emsp;&emsp;&emsp;return 28<br>
+						&emsp;&emsp;else:<br>
+						&emsp;&emsp;&emsp;return 30<br><br>
+
+						<em><u>This determines the following day</u></em><br>
+						def nextDay(year, month, day):<br>
+		    			&emsp;if day &lt; daysInMonth(year, month):<br>
+		        		&emsp;&emsp;return year, month, day + 1<br>
+		    			&emsp;else:<br>
+		        		&emsp;&emsp;if month == 12:<br>
+		            	&emsp;&emsp;&emsp;return year + 1, 1, 1<br>
+		        		&emsp;&emsp;else:<br>
+		            	&emsp;&emsp;&emsp;return year, month + 1, 1 <br><br>
+
+		            	<em><u>This makes sure that the first date is not before the second date</u></em><br>
+						def dateIsBefore(year1, month1, day1, year2, month2, day2):<br>
+						&emsp;if year1 &lt; year2:<br>
+						&emsp;&emsp;return True<br>
+						&emsp;if year1 == year2:<br>
+						&emsp;&emsp;if month1 &lt; month2:<br>
+						&emsp;&emsp;&emsp;return True<br>
+						&emsp;&emsp;if month1 == month2:<br>
+						&emsp;&emsp;&emsp;return day1 &lt; day2<br>
+						&emsp;return False<br><br>       		            	
+		
+						<em><u>This counts the number of days between each given date, starting with 0</u></em><br>
+						def daysBetweenDates(year1, month1, day1, year2, month2, day2):<br>
+						&emsp;assert not dateIsBefore(year2, month2, day2, year1, month1, day1)<br>
+						&emsp;days = 0<br>
+						&emsp;while dateIsBefore(year1, month1, day1, year2, month2, day2):<br>
+						&emsp;&emsp;year1, month1, day1 = nextDay(year1, month1, day1)<br>
+						&emsp;&emsp;days += 1<br>
+						&emsp;return days <br><br>
+
+						<em><u>This is the testing area</u></em><br>
+						def test():<br>
+					    test_cases = [((2012,1,1,2012,2,28), 58), <br>
+					    &emsp;&emsp;&emsp;((2012,1,1,2012,3,1), 60),<br>
+					    &emsp;&emsp;&emsp;((2011,6,30,2012,6,30), 366),<br>
+					    &emsp;&emsp;&emsp;((2011,1,1,2012,8,8), 585 ),<br>
+					    &emsp;&emsp;&emsp;((1900,1,1,1999,12,31), 36523)]<br><br>
+					    
+					    for (args, answer) in test_cases:<br>
+					    &emsp;result = daysBetweenDates(*args)<br>
+					    &emsp;if result != answer:<br>
+					    &emsp;&emsp;print "Test with data:", args, "failed"<br>
+					    &emsp;else:<br>
+					    &emsp;&emsp;print "Test case passed!"<br><br>
+
+						test()</li></ul>
+					</div>
+				</div>
+	<h2> Stage 2: Work session 5</h2>
+		<div class= "concpet">
+
+			Notes start here!
+
+
+
+
+
+<br><br><br><br>
+<a href="http://www.w3schools.com"> w3schools</a><br>	
+<a href= "http://mathcs.holycross.edu/~kwalsh/python/">Python Interpreter</a><br>	
+<a href="http://www.sublimetext.com/2">Sublime2 Text Download</a><br>
+</div>
+</html>

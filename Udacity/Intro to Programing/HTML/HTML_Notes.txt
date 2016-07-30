@@ -1,0 +1,93 @@
+Vocab
+  HTML-Hyper text markup language- the standard markup language used to create
+      web pages.
+  CSS-Cascading Style Sheets- style sheet language used for describing the look
+      and formatting of a document written in a markup language
+	DOM-Document Object Model- a cross platform and language-independent convention
+			for representing and interacting with objects in HTML. The nodes of every
+			document are organized in a tree structure.
+  Block element- is a tag that creates a block around the content. They are:
+      <p>    <div></div>
+  In-line element- is a tag that wraps the content to the next line
+      <br>  <b></b>    <em></em>    Website    Image    <span></span>
+  Attributes- are held inside of tags that will specify what is being called on
+      <tag atter="value"> contents </tag>
+      tag= anchor   atter= calling the attribute  value= www.webiste.com
+
+
+
+------------------------------HTML--------------------------------
+Tags:
+  Bold        <b></b>
+  Break       <br>
+  Paragraph   <p></p>
+  Italic      <em></em>
+  Website     <a href></a>
+  Image       <img src="url" alt="text">
+  Span        <span class="foo"></span>
+  Div         <div class="bar"></div> (creates boxes)
+  Comment     <!--anything that needs to be commented-->
+
+
+HTML Documents Structure
+  <!DOCTYPE HTML>
+  <html> (opening HTML tag)
+  <head> (meta data)
+      <title> Title! </title> (title of page, web tab at top of page)
+  </head>
+  <body> (starts the body)
+      <b> Content </b>
+  </body>
+  </html> (ends the document)
+
+
+
+------------------------------CSS--------------------------------
+Web pages are made up of at least 2 types of pages. An HTML page that will hold all of the structure of the page, and a CSS file that holds all of the styling of the page.
+
+Notes:
+    Writing CSS: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
+    CSS Summary: https://classroom.udacity.com/courses/ud000/lessons/4137958782/concepts/36111086980923
+    HTML and CSS: https://classroom.udacity.com/courses/ud000/lessons/4137958782/concepts/36266187300923
+                  https://classroom.udacity.com/courses/ud000/lessons/4137958782/concepts/36287086720923
+
+
+Tags:
+  Comment     /*anything that needs to be commented*/
+
+
+There are 3 ways to write CSS:
+    1. Write CSS in the <head> of your HTML
+    2. Link your HTML to a separate CSS file
+    3. Write your style inline with your HTML
+
+
+Box Model (the most basic, with px):
+|----------------------------------|
+|             margin               |  Margin-clear, think of "space" between boxes
+|   |---------------------------|  |
+|   |         border            |  |  Border-protects the padding
+|   |   |-------------------|   |  |
+|   |   |     padding       |   |  |  Padding-clears an area around the content
+|   |   | |--------------|  |   |  |
+|   |   | |   content    |  |   |  |  Content-center of box, holds your items
+
+CSS style with box model (the newest):
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+Box Model (with %):
+  This will allow images to adjust based on window size.
+  <div class='name' style='
+      width: 50%
+      height: 50%
+  '>
+
+Flex Box:
+.app {
+    display: flex;
+}

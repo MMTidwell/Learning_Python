@@ -1,0 +1,33 @@
+Vocab-
+  Web Crawler- finds webpages by using seeds
+  White Space- spaces between items in your program, in python items must line
+    up otherwise you will get an error.
+  Comment- starts with # and goes to the end of the line
+  Variable- a expression that holds values of context or numbers
+    variable_name = expression
+  Strings (str)- Characters surround by quotes, they can be single or double quotes.
+    They are very similar to variables in set up.
+  Integer (int)- a number
+  Index- counting from 0-end of string, can start from the end with -1
+
+
+Variables-
+  -Variables are an expression that holds values of content or numbers
+  -Variables hold the last value given to them, unless in a def or class
+    days = 49
+    days = days - 1
+    print days
+      => 48
+
+
+Strings-
+  -Characters surround by quotes, they can be single or double quotes. They are
+    very similar to variables in set up.
+
+
+Index- 
+  -Counting from 0-end of string, can start from the end with -1
+  -Sub-sequences- selecting parts of a string
+    variable_name = 'string'
+    print variable_name [3:4]
+      => in

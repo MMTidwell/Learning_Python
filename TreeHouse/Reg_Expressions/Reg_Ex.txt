@@ -1,0 +1,31 @@
+r => raw string
+re.match => only checks the beginning of the string
+re.search => checks the whole txt file
+
+open('names.txt') => opens file
+names_file.read() => reads file
+names_file.close() => closes file
+
+\w => any Unicode word or character (upper, and lower case, number and  _.)
+\W => anything that isn't a Unicode character
+\s => any whitespace
+\S => anything that isn't whitespace
+\d => any number from 0-9
+\D => anything that isn't a number
+\b => word boundaries or edges of a word
+\B => anything that isn't the edge of a word
+
+ESCAPES
+{3} => something that occurs exactly 3 times
+(,3} => something that occurs 0 - 3 times
+{3,} => occurs 3 or more times
+{3,5} => occurs 3 - 5 times
+? => occurs 0-1 times
+* => occurs at least 0 times
++ => occurs at least once
+
+SETS
+[aple] => apple
+[a-z] => any lowercase letters from a - z
+[^2] => anything that is not 2
+
